@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://mark-santiago.vercel.app/sitemap.xml
