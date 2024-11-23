@@ -81,14 +81,14 @@ export default function About({
               variants={headingFromLeft}
             >
               <span className="mr-2">Work Experiences</span>
-              <span className="px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded-full">
+              {/* <span className="px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded-full">
                 {Experience.length}
-              </span>
+              </span> */}
             </AnimatedHeading>
             {experiencesLoading ? (
               <Loader />
             ) : Experience.length > 0 ? (
-              <ExperienceSection experiences={Experience} showHomeHeading={false} />
+              <ExperienceSection experiences={Experience} />
             ) : (
               <NoData />
             )}

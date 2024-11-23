@@ -3,7 +3,7 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote"
 import React from "react"
 import { IconType } from "react-icons/lib"
 import { ReadTimeResults } from "reading-time"
-
+import { StaticImageData } from "next/image";
 
 /* Static Data Types */
 export type PersonalStaticData = {
@@ -20,30 +20,19 @@ export type StaticData = {
 
 /* Profile Types */
 export type ProfileType = {
-  id: number
-  username: string
   email: string
   name: string
-  slug: string
   nickname: string
-  gender: string
-  image: string
-  dob: string
-  website: string
+  devUsername: string
+  image: StaticImageData
+  about: string
   contact: string
-  contact_email: string
+  twitter: string
+  facebook: string
   linkedin: string
   github: string
   address: string
-  about: string
-  is_portfolio_user: string
   resume_link: string
-  is_active: string
-  is_staff: string
-  is_superuser: string
-  date_joined: string
-  last_login: string
-  updated_at: string
 }
 
 /* Custom Animated Components types */
@@ -121,6 +110,27 @@ export type ExperienceType = {
   description?: string
   created_at: string
   updated_at: string
+}
+
+export type DevToArticleType = {
+  id: number;
+  title: string;
+  description: string;
+  published_at: string;
+  slug: string;
+  url: string;
+  tag_list: string[];
+  cover_image: string;
+  reading_time_minutes: number;
+  type_Of: string;
+  tags: string;
+  positive_reactions_count: number;
+  comments_count: number;
+  user:{
+    name: string;
+    profile_image: string;
+    username: string;
+  }
 }
 
 export type SkillType = {
@@ -303,8 +313,8 @@ export type SpotifyAccessToken = {
 }
 
 export type GithubRepo = {
-  stargazers_count: number
   fork: boolean
+  stargazers_count: number
   forks_count: number
 }
 

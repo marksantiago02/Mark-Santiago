@@ -120,13 +120,25 @@ module.exports = withPWA({
   },
   swcMinify: true,
   reactStrictMode: true,
-  images: {
-    domains: [
-      // Insert Allowed Domains Here
-      "https://postimg.cc",
-      "https://i.postimg.cc",
-    ],
-    // unoptimized: true,
+ images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'postimg.cc'
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.postimg.cc'
+      },
+      {
+        protocol: 'https',
+        hostname: 'media2.dev.to'
+      },
+      {
+        protocol: 'https',
+        hostname: 'dev-to-uploads.s3.amazonaws.com'
+      }
+    ]
   },
   typescript: {
     ignoreBuildErrors: false,

@@ -3,9 +3,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import { popUpFromBottomForText } from '../../content/FramerMotionVariants'
 import AnimatedText from '../FramerMotion/AnimatedText'
 import AnimatedHeading from '../FramerMotion/AnimatedHeading'
-import CommentForm from './CommentForm'
+import { profileInfo } from '@utils/data/profileInfo'
 
-export default function Comment({ slug, contentURL }: { slug: string; contentURL: string }) {
+export default function Comment() {
   return (
     <div id="comment" className="dark:bg-darkPrimary !relative">
       {/* Get in touch top section */}
@@ -19,20 +19,8 @@ export default function Comment({ slug, contentURL }: { slug: string; contentURL
           We value your input and look forward to reading what you have to say. So go ahead, express yourself, and
           let's create an insightful and engaging discussion together!. 🗣️
           <br />
-          <span className="text-sky-600">[N:B: Your email won't be published or shared]</span>
+          <span className="text-sky-600">{profileInfo.email}</span>
         </AnimatedText>
-      </section>
-
-      {/* Wrapper Container */}
-      <section className="flex flex-col w-full px-5 mx-auto lg:flex-row dark:bg-darkPrimary dark:text-white lg:pb-10">
-        {/* Left Comment form section */}
-        <div className="w-full mx-auto">
-          {/* <AnimatedHeading variants={popUpFromBottomForText} className="w-full my-2 text-2xl font-bold text-center">
-            Add Comment
-          </AnimatedHeading> */}
-
-          <CommentForm slug={slug} contentURL={contentURL} />
-        </div>
       </section>
     </div>
   )

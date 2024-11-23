@@ -20,7 +20,7 @@ export default function ProjectSection({ projects }: { projects: ProjectType[] }
           variants={headingFromLeft}
         >
           <span className="mr-2">Projects</span>
-          <span className="px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded-full">{projects.length}</span>
+          {/* <span className="px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded-full">{projects.length}</span> */}
         </AnimatedHeading>
       </div>
 
@@ -48,7 +48,7 @@ export default function ProjectSection({ projects }: { projects: ProjectType[] }
                 <div className="card">
                   {project.image !== null && (
                     <div className="relative -mt-[35%] sm:-mt-0 md:-ml-[35%] w-full sm:w-1/2 md:w-8/12 shrink-0 rounded-xl overflow-hidden shadow-2xl before:absolute before:inset-0 dark:before:bg-black/20 before:z-auto">
-                      <Link href={`projects/${project.slug}`} title="View Project Details" rel="noopener noreferrer">
+                      <Link href={project.preview_url!} title="View Project Details" rel="noopener noreferrer">
                         <Image
                           title={project.title}
                           alt={project.title}
@@ -70,7 +70,7 @@ export default function ProjectSection({ projects }: { projects: ProjectType[] }
                   )}
                   <div className="flex flex-col justify-start gap-3">
                     <div className="text-gray-500 hover:text-black dark:hover:text-white">
-                      <Link href={`projects/${project.slug}`} title="View Project Details" rel="noopener noreferrer">
+                      <Link href={project.preview_url!} title="View Project Details" rel="noopener noreferrer">
                         <h1 className="font-bold text-neutral-900 dark:text-neutral-200 text-xl hover:underline">{project.title}</h1>
                       </Link>
                     </div>

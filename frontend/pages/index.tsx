@@ -1,3 +1,4 @@
+'use client'
 // Page Components START
 import Image from 'next/image'
 import Metadata from '@components/MetaData'
@@ -13,50 +14,56 @@ import staticData from '@content/StaticData'
 import React from 'react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { getProfileInfo } from '@lib/backendAPI'
-import { ProfileType, ExperienceType } from '@lib/types'
+import { profileInfo } from '@utils/data/profileInfo'
+import { ExperienceType, DevToArticleType } from '@lib/types'
 import { BsGithub, BsLinkedin, BsTwitter, BsFacebook } from 'react-icons/bs'
 import Loader from '@components/Loader'
 import NoData from "@components/NoData"
 import Experience from '@content/Experience';
-import BlogsData from '@content/Blogs';
-import dynamic from 'next/dynamic'
-
-const ExperienceSection = dynamic(() => import('@components/Home/ExperienceSection'), {
-  loading: () => <Loader />,
-})
-
-const BlogsSection = dynamic(() => import('@components/Home/BlogsSection'), {
-  loading: () => <Loader />,
-})
-
-const Contact = dynamic(() => import('@components/Contact'), {
-  loading: () => <Loader />,
-})
+import ExperienceSection from '@components/Home/ExperienceSection'
+import BlogsSection from '@components/Home/BlogsSection'
+import Contact from '@components/Contact'
 
 export default function Home() {
   // Loaders
-  const [experiencesLoading, setExperiencesLoading] = useState(true)
-  const [blogsLoading, setBlogsLoading] = useState(true)
-
-  const [profileInfo, setProfileInfo] = useState<ProfileType>()
-
-  const fetchProfileInfo = async () => {
-    const profileData: ProfileType = await getProfileInfo()
-    setProfileInfo(profileData)
-  }
+  const [blogsLoading, setBlogsLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  const [blogsData, setBlogsData] = useState<DevToArticleType[]>([]);
 
   useEffect(() => {
-    fetchProfileInfo()
-    if (BlogsData.length) {
-      setBlogsLoading(false);
-    }
-    if (Experience.length) {
-      setExperiencesLoading(false);
-    }
-  }, [])
+    setMounted(true);
+    setBlogsLoading(true);
 
-  const latest_experience: ExperienceType = Experience[0]
+    fetch(`https://dev.to/api/articles?username=${profileInfo.devUsername}`)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
+      .then(data => {
+        const sortedData = Array.isArray(data) ? data.sort((b, a) =>
+          new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+        ) : [];
+        if (sortedData.length > 0) {
+          setBlogsData(sortedData);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching blogs:', error);
+        setBlogsData([]);
+      })
+      .finally(() => {
+        setBlogsLoading(false);
+      });
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  console.log("blogsData------->", blogsData);
+  const latest_experience: ExperienceType = Experience[0];
 
   return (
     <>
@@ -125,13 +132,13 @@ export default function Home() {
                 className="text-[#474747] dark:text-gray-300 font-small font-light text-sm md:text-base text-center"
               >
                 {/* Address */}
-                <div>Address: {'MD, Brandywine, USA'}</div>
+                <div>Address: {profileInfo.address}</div>
                 {/* Email */}
                 <div className="mt-2">
                   <span>Email: </span>
                   <span className="text-sky-800 dark:text-sky-400">
-                    <a href='marksantiago0929@gmail.com'>
-                      {'marksantiago0929@gmail.com'}
+                    <a href={profileInfo.email}>
+                      {profileInfo.email}
                     </a>
                   </span>
                 </div>
@@ -150,7 +157,7 @@ export default function Home() {
                 {/* LinkedIn */}
                 <div className="w-6 h-6 mt-2 mr-2">
                   <Link
-                    href={"https://www.linkedin.com/in/mark-santiago-373172339/"}
+                    href={profileInfo?.linkedin}
                     title="LinkedIn Profile"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -161,7 +168,7 @@ export default function Home() {
 
                 {/* Github */}
                 <div className="w-6 h-6 mt-2 mr-2">
-                  <Link href={"https://github.com/BTC415"} title="GitHub Profile" target="_blank" rel="noopener noreferrer">
+                  <Link href={`https://github.com/${profileInfo?.github}`} title="GitHub Profile" target="_blank" rel="noopener noreferrer">
                     <BsGithub className="w-full h-full transition-all hover:scale-110 active:scale-90" />
                   </Link>
                 </div>
@@ -169,7 +176,7 @@ export default function Home() {
                 {/* Twitter */}
                 <div className="w-6 h-6 mt-2 mr-2">
                   <Link
-                    href={"https://x.com/marksantiago22"}
+                    href={profileInfo.twitter}
                     title="Twitter Profile"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -181,7 +188,7 @@ export default function Home() {
                 {/* Facebook */}
                 <div className="w-6 h-6 mt-2 mr-2">
                   <Link
-                    href={"https://www.facebook.com/profile.php?id=61561446326312&mibextid=ZbWKwL"}
+                    href={profileInfo.facebook}
                     title="Facebook Profile"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -194,40 +201,30 @@ export default function Home() {
             </div>
 
             {/* Resume Download Button */}
-              <Link
-                href={'https://drive.google.com/file/d/1ECsFm-j_q6U6tQ8Qt1EsqjhaI-1qQWWA/view?usp=drive_link'}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2 transition-transform border border-gray-500 rounded-md outline-none select-none dark:border-gray-400 hover:bg-white dark:hover:bg-neutral-800 active:scale-95"
-              >
-                <FiDownload />
-                <p>Resume</p>
-              </Link>
+            <Link
+              href={profileInfo.resume_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2 transition-transform border border-gray-500 rounded-md outline-none select-none dark:border-gray-400 hover:bg-white dark:hover:bg-neutral-800 active:scale-95"
+            >
+              <FiDownload />
+              <p>Resume</p>
+            </Link>
           </div>
         </motion.section>
 
         <div>
-          {/* Experiences */}
           <HomeHeading title="Work Experiences" />
-          {experiencesLoading ? (
-            <Loader />
-          ) : Experience.length > 0 ? (
-            <ExperienceSection experiences={Experience} showHomeHeading={false} />
-          ) : (
-            <NoData />
-          )}
+          <ExperienceSection experiences={Experience} />
 
-          {/* Blogs */}
           <HomeHeading title="Blogs" />
           {blogsLoading ? (
             <Loader />
-          ) : BlogsData.length > 0 ? (
-            <BlogsSection blogs={BlogsData} showHomeHeading={false} />
+          ) : blogsData?.length > 0 ? (
+            <BlogsSection blogs={blogsData} />
           ) : (
             <NoData />
           )}
-
-          {/* Contact Section */}
           <Contact />
         </div>
       </div>

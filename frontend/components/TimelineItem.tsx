@@ -19,7 +19,7 @@ export function TimelineItem({
   company,
   company_image,
   company_url = null,
-  address = null,
+  // address = null,
   job_type,
   job_location_type,
   duration,
@@ -76,7 +76,7 @@ export function TimelineItem({
               </div>
             ) : null}
 
-            {address ? <p className="p-0 m-0 text-sm font-light text-gray-500">{address}</p> : null}
+            {/* {address ? <p className="p-0 m-0 text-sm font-light text-gray-500">{address}</p> : null} */}
 
             <p className="p-0 m-0 text-sm text-gray-500">
               <span className="font-bold">{duration}</span>

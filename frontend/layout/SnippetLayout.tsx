@@ -128,7 +128,7 @@ export default function SnippetLayout({
             {code_snippet.title}
           </h1>
           <div className="relative flex items-center justify-center w-20 h-12 p-1 overflow-hidden">
-            <Image className="m-0" src={code_snippet.image} alt={code_snippet.title} width={100} height={100}></Image>
+            <Image className="m-0" src={code_snippet.image} alt={code_snippet.title} width={100} height={100} />
           </div>
         </div>
 

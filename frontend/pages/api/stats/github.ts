@@ -43,5 +43,5 @@ export default async function handler(
     followers,
     githubStars,
     forks,
-  });
+    });
 }
