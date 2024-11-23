@@ -77,7 +77,7 @@ export default function Stats() {
 
         <div className="flex justify-center w-full my-2">
           <Link href="https://github.com/BTC415?tab=repositories">
-            <Image
+            <img
               src="https://github-readme-stats-one-bice.vercel.app/api?username=BTC415&theme=gotham&show_icons=true&count_private=true&hide_border=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR"
               className="w-full p-2"
               alt="@BTC415's github-readme-stats"
