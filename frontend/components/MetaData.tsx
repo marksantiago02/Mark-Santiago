@@ -61,8 +61,8 @@ export default function MetaData({
       <meta property="og:image" content={previewImage || '/images/mark.jpg'} />
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@NumanIbnMazid" />
-      <meta name="twitter:title" content={`${title}${suffix ? ` - ${suffix}` : ''} | marksantiago0929`} />
+      <meta name="twitter:creator" content="@MarkSantiago0929" />
+      <meta name="twitter:title" content={`${title}${suffix ? ` - ${suffix}` : ''} | MarkSantiago0929`} />
       <meta name="twitter:description" content={description || "Mark Santiago's Portfolio Application"} />
       <meta name="twitter:image" content={previewImage || '/images/mark.jpg'} />
       <meta name="twitter:image:alt" content={title || 'mark-santiago.vercel.app'}></meta>

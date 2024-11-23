@@ -3,39 +3,41 @@ import { GithubRepo } from "./types"
 const GitHubAccessToken = process.env.GITHUB_ACCESS_TOKEN
 
 const tempData = {
-  "login": "NumanIbnMazid",
-  "id": 38869177,
-  "node_id": "MDQ6VXNlcjM4ODY5MTc3",
-  "avatar_url": "https://avatars.githubusercontent.com/u/38869177?v=4",
+  "login": "BTC415",
+  "id": 133281370,
+  "node_id": "U_kgDOB_G2Wg",
+  "avatar_url": "https://avatars.githubusercontent.com/u/133281370?v=4",
   "gravatar_id": "",
-  "url": "https://api.github.com/users/NumanIbnMazid",
-  "html_url": "https://github.com/NumanIbnMazid",
-  "followers_url": "https://api.github.com/users/NumanIbnMazid/followers",
-  "following_url": "https://api.github.com/users/NumanIbnMazid/following{/other_user}",
-  "gists_url": "https://api.github.com/users/NumanIbnMazid/gists{/gist_id}",
-  "starred_url": "https://api.github.com/users/NumanIbnMazid/starred{/owner}{/repo}",
-  "subscriptions_url": "https://api.github.com/users/NumanIbnMazid/subscriptions",
-  "organizations_url": "https://api.github.com/users/NumanIbnMazid/orgs",
-  "repos_url": "https://api.github.com/users/NumanIbnMazid/repos",
-  "events_url": "https://api.github.com/users/NumanIbnMazid/events{/privacy}",
-  "received_events_url": "https://api.github.com/users/NumanIbnMazid/received_events",
+  "url": "https://api.github.com/users/BTC415",
+  "html_url": "https://github.com/BTC415",
+  "followers_url": "https://api.github.com/users/BTC415/followers",
+  "following_url": "https://api.github.com/users/BTC415/following{/other_user}",
+  "gists_url": "https://api.github.com/users/BTC415/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/BTC415/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/BTC415/subscriptions",
+  "organizations_url": "https://api.github.com/users/BTC415/orgs",
+  "repos_url": "https://api.github.com/users/BTC415/repos",
+  "events_url": "https://api.github.com/users/BTC415/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/BTC415/received_events",
   "type": "User",
+  "user_view_type": "public",
   "site_admin": false,
-  "name": "Mark Santiago",
-  "company": "SELISE DIGITAL PLATFORMS",
-  "blog": "https://www.linkedin.com/in/mark-santiago-373172339/",
-  "location": "Dhaka, Bangladesh",
-  "email": "marksantiago0929@gmail.com",
-  "hireable": true,
-  "bio": "Experienced professional Software Engineer who enjoys developing innovative software solutions that are tailored to customer desirability and usability.",
-  "twitter_username": "NumanIbnMazid",
-  "public_repos": 84,
+  "name": "MARK",
+  "company": "Freelance",
+  "blog": "",
+  "location": "Angeles, Philippines",
+  "email": null,
+  "hireable": null,
+  "bio": "A critical and forward thinking fullstack developer && blockchain engineer",
+  "twitter_username": null,
+  "public_repos": 95,
   "public_gists": 0,
-  "followers": 13,
-  "following": 35,
-  "created_at": "2018-04-30T21:30:32Z",
-  "updated_at": "2023-06-24T11:38:55Z"
+  "followers": 658,
+  "following": 7,
+  "created_at": "2023-05-11T21:47:48Z",
+  "updated_at": "2024-11-21T08:32:27Z"
 }
+
 
 // its for /api/stats/github
 export async function fetchGithub() {
@@ -43,7 +45,7 @@ export async function fetchGithub() {
   if (fake) return tempData
 
   return fetch(
-    "https://api.github.com/users/NumanIbnMazid",
+    "https://api.github.com/users/BTC415",
     {
       headers: {
         Authorization: `Bearer ${GitHubAccessToken}`,
@@ -81,12 +83,12 @@ export async function getGithubStarsAndForks() {
     }
   }
   // filter those repos that are forked
-  const mineRepos: GithubRepo[] = userRepos?.filter(
-    (repo: GithubRepo) => !repo.fork
-  )
+  // const mineRepos: GithubRepo[] = userRepos?.filter(
+  //   (repo: GithubRepo) => !repo.fork
+  // )
 
   // Calculate the total number of stars for the user's repositories
-  const githubStars = mineRepos.reduce(
+  const githubStars = userRepos.reduce(
     (accumulator: number, repository: GithubRepo) => {
       return accumulator + repository["stargazers_count"]
     },
@@ -94,7 +96,7 @@ export async function getGithubStarsAndForks() {
   )
 
   // Calculate the total number of forks for the user's repositories
-  const forks = mineRepos.reduce(
+  const forks = userRepos.reduce(
     (accumulator: number, repository: GithubRepo) => {
       return accumulator + repository["forks_count"]
     },

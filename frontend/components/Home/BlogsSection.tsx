@@ -1,12 +1,14 @@
 import { HomeHeading } from "../../pages"
 import Link from "next/link"
 import Blog from "../Blog"
-import { BlogType } from "@lib/types"
+import { DevToArticleType } from "@lib/types"
 
-export default function BlogsSection({ blogs, showHomeHeading = true }: { blogs: BlogType[], showHomeHeading?: boolean }) {
+export default function BlogsSection({ blogs }: { blogs: DevToArticleType[] }) {
+  console.log("blogs in blogs Section--->", blogs);
+
   return (
     <section className="mx-5 mb-5">
-      {showHomeHeading && <HomeHeading title="Recent Posts" />}
+      <HomeHeading title="Recent Posts" />
 
       <div className="grid grid-cols-1 gap-4 mx-auto my-10">
         {blogs.map((blog, index) => {

@@ -9,28 +9,26 @@ import { headingFromLeft } from '@content/FramerMotionVariants'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-export default function ExperienceSection({ experiences, showHomeHeading = true }: { experiences: ExperienceType[], showHomeHeading?: boolean }) {
+export default function ExperienceSection({ experiences }: { experiences: ExperienceType[] }) {
   const router = useRouter()
   const isHomePage = router.pathname === '/'
   // limit experiences to 1 if on home page otherwise show all
   // const experiencesToDisplay = isHomePage ? experiences.slice(0, 1) : experiences
   return (
     <section className="mx-5">
-      {showHomeHeading && (
-        <div>
-          <AnimatedHeading
-            className="w-full my-2 text-3xl font-bold text-left font-inter flex justify-center items-center"
-            variants={headingFromLeft}
-          >
-            <span className="mr-2">Work Experiences</span>
-            {!isHomePage && (
-              <span className="px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded-full">
-                {experiences.length}
-              </span>
-            )}
-          </AnimatedHeading>
-        </div>
-      )}
+
+      <div>
+        <AnimatedHeading
+          className="w-full my-2 text-3xl font-bold text-left font-inter flex justify-center items-center"
+          variants={headingFromLeft}
+        >
+          {!isHomePage && (
+            <span className="px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded-full">
+              {experiences.length}
+            </span>
+          )}
+        </AnimatedHeading>
+      </div>
 
       <motion.div
         initial="hidden"
@@ -58,7 +56,7 @@ export default function ExperienceSection({ experiences, showHomeHeading = true 
                     company={experience.company}
                     company_image={experience.company_image}
                     company_url={experience.company_url}
-                    address={experience.address}
+                    // address={experience.address}
                     job_type={experience.job_type}
                     job_location_type={experience.job_location_type}
                     duration={experience.duration}

@@ -6,45 +6,72 @@ import { RiCloseCircleLine } from 'react-icons/ri'
 import AnimatedDiv from '@components/FramerMotion/AnimatedDiv'
 import PageTop from '@components/PageTop'
 import pageMeta from '@content/meta'
-import { BlogType } from '@lib/types'
 import { CgSearch } from 'react-icons/cg'
 import Loader from '@components/Loader'
 import NoData from '@components/NoData'
 import dynamic from 'next/dynamic'
-import BlogsData from '@content/Blogs'
+import { profileInfo } from '@utils/data/profileInfo'
+import { DevToArticleType } from '@lib/types'
 
 const Blog = dynamic(() => import('@components/Blog'), {
   loading: () => <Loader />,
 })
 
 export default function Blogs() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [mounted, setMounted] = useState(false);
+  const [blogsData, setBlogsData] = useState<DevToArticleType[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchValue, setSearchValue] = useState('');
+  const [filteredBlogs, setFilteredBlogs] = useState<DevToArticleType[]>([]);
+  const searchRef = useRef<HTMLInputElement>(null!);
 
+  // Fetch blogs data
   useEffect(() => {
-    if (BlogsData.length) setIsLoading(false);
-  }, [])
+    setMounted(true);
 
-  const [searchValue, setSearchValue] = useState('')
-  const [filteredBlogs, setFilteredBlogs] = useState([...BlogsData])
-  const searchRef = useRef<HTMLInputElement>(null!)
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch(`https://dev.to/api/articles?username=${profileInfo.devUsername}`);
+        if (!res.ok) throw new Error('Network response was not ok');
 
+        const data = await res.json();
+        const sortedData = Array.isArray(data) ?
+          data.sort((b, a) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime())
+          : [];
+
+        setBlogsData(sortedData);
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+        setBlogsData([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  // Filter blogs based on search
   useEffect(() => {
-    setFilteredBlogs(
-      BlogsData.filter((post: BlogType) => post.title.toLowerCase().includes(searchValue.trim().toLowerCase()))
-    )
-  }, [searchValue, BlogsData])
+    const filteredPosts = blogsData.filter(post =>
+      post.title.toLowerCase().includes(searchValue.trim().toLowerCase())
+    );
+    setFilteredBlogs(filteredPosts);
+  }, [searchValue, blogsData]);
 
-  function handleAutoSearch(e: any) {
-    if (e.code === 'Slash' && e.ctrlKey) {
-      searchRef.current.focus()
-    }
-  }
-
+  // Keyboard shortcut handler
   useEffect(() => {
-    document.addEventListener('keydown', handleAutoSearch)
+    const handleAutoSearch = (e: KeyboardEvent) => {
+      if (e.code === 'Slash' && e.ctrlKey) {
+        searchRef.current?.focus();
+      }
+    };
 
-    return () => document.removeEventListener('keydown', handleAutoSearch)
-  }, [])
+    document.addEventListener('keydown', handleAutoSearch);
+    return () => document.removeEventListener('keydown', handleAutoSearch);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <>
@@ -57,12 +84,12 @@ export default function Blogs() {
 
       {isLoading ? (
         <Loader />
-      ) : BlogsData.length > 0 ? (
+      ) : blogsData.length > 0 ? (
         <section className="pageTop flex flex-col gap-2 bg-darkWhitePrimary dark:bg-darkPrimary">
           <PageTop pageTitle="Blogs">
             Welcome to my blog page! Here, you will find a collection of insightful and informative articles that I
             have written on various topics. As a passionate writer and avid learner, I believe in the power of sharing
-            knowledge and experiences through the written word. Till now, I've written {BlogsData.length} articles.
+            knowledge and experiences through the written word. Till now, I've written {blogsData.length} articles.
           </PageTop>
 
           <AnimatedDiv

@@ -27,7 +27,7 @@ const socialMedia: SocialPlatform[] = [
     {
     title: "Twitter",
     Icon: BsTwitter,
-    url: "https://www.x.com/profile.php?id=61561446326312&mibextid=ZbWKwL",
+    url: "https://www.x.com/MarkSantiago0929",
   },
   {
     title: "YouTube",

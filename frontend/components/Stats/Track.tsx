@@ -36,7 +36,7 @@ export default function Track({
               height={50}
               alt={title}
               quality={50}
-            ></Image>
+            />
           ) : (
             <div className="w-full h-full bg-white animate-pulse"></div>
           )}

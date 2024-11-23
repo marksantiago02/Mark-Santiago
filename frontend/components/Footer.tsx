@@ -7,8 +7,6 @@ import {
 } from "../content/FramerMotionVariants"
 import { navigationRoutes } from "../utils/utils"
 import { motion } from "framer-motion"
-import useSWR from "swr"
-import fetcher from "../lib/fetcher"
 import { HiOutlineQrcode } from "react-icons/hi"
 import { BsDot } from "react-icons/bs"
 import NewsletterSmall from "./NewsletterSmall"
@@ -21,8 +19,9 @@ export default function Footer({
   setShowQR: (value: boolean) => void
   showQR: boolean
 }) {
-  const { data: visitors } = useSWR("/api/ga", fetcher)
+  // const { data: visitors } = useSWR("/api/ga", fetcher)
   const { isDarkMode } = useDarkMode()
+  const visitors = 325;
 
   const footerClass = isDarkMode ? 'footer-with-rays-dark' : 'footer-with-rays'
 
@@ -82,10 +81,10 @@ export default function Footer({
           <div className="relative flex items-center px-4 py-1 text-xs bg-white rounded-full shadow dark:bg-darkSecondary sm:text-sm">
             <BsDot className="-ml-2 text-green-500 w-7 h-7 animate-ping" />
             <div className="flex items-center gap-1">
-              {visitors?.totalVisitors ?? (
+              {visitors?? (
                 <div className="w-10 h-3 bg-gray-300 rounded-full dark:bg-darkPrimary animate-pulse"></div>
               )}{' '}
-              visitors in last {visitors?.days} days
+              visitors in last 10 days
             </div>
           </div>
           {/* QRCode Scanner */}
