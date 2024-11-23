@@ -6,8 +6,6 @@ import NoData from "@components/NoData"
 import MetaData from '@components/MetaData'
 import pageMeta from '@content/meta'
 import dynamic from 'next/dynamic'
-// import BlogsData from '@content/Blogs'
-// import MyProfile from '@content/MyProfile'
 import { profileInfo } from '@utils/data/profileInfo'
 
 const BlogLayout = dynamic(() => import('@layout/BlogLayout'), {
@@ -20,7 +18,6 @@ export default function BlogDetails() {
   const [isLoading, setIsLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [blogData, setBlogData] = useState<DevToArticleType | null>(null);
-  console.log("slug--->", slug)
   
   useEffect(() => {
     setMounted(true);
@@ -54,8 +51,6 @@ export default function BlogDetails() {
   }
 
   const blogOverview = blogData?.description ? stripHtml(blogData.description) : undefined;
-  console.log("blogData------->", blogData);
-
 
   return (
     <>
@@ -76,34 +71,3 @@ export default function BlogDetails() {
     </>
   )
 }
-
-// export async function getServerSideProps(context: any) {
-//   const { slug } = context.params
-//   const blogData: BlogType = await getBlogDetails('1', slug)
-//   let blogData:BlogType = {
-//     id: 0,
-//     slug: '',
-//     title: '',
-//     image: '',
-//     content: '',
-//     author: '',
-//     status: '',
-//     order: 0,
-//     total_views: 0,
-//     total_likes: 0,
-//     user_liked: false,
-//     created_at: '',
-//     updated_at: ''
-//   };
-//   const tmp = BlogsData.find((blog: BlogType) => blog.slug === slug)
-//   if (tmp !== undefined) {
-//     blogData = tmp; 
-//   }
-  
-//   return {
-//     props: {
-//       slug,
-//       blogData
-//     }
-//   }
-// }

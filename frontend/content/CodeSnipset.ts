@@ -15,8 +15,8 @@ const CodeSnipsets = [
         updated_at: "5 Jul 2024"
     },
     {
-        slug: "Simple NFT Marketplace",
-        title: "Simple NFT Marketplace",
+        slug: "Simple DeFi Platform",
+        title: "Simple DeFi Platform",
         overview: "The project described above is a simple yet powerful Ethereum-based smart contract designed for swapping ERC20 tokens. This contract facilitates the exchange of one type of ERC20 token (Token A) for another (Token B) based on a predefined exchange rate.",
         image: "/images/snipset.png",
         language: "Solidity, TypeScript",
@@ -26,8 +26,8 @@ const CodeSnipsets = [
         total_views: 205,
         total_likes: 46,
         user_liked: true,
-        created_at: "5 Jul 2024",
-        updated_at: "5 Jul 2024"
+        created_at: "12 Jun 2024",
+        updated_at: "12 Jun 2024"
     }
 ];
 

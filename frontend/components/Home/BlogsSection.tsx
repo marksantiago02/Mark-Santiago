@@ -4,12 +4,10 @@ import Blog from "../Blog"
 import { DevToArticleType } from "@lib/types"
 
 export default function BlogsSection({ blogs }: { blogs: DevToArticleType[] }) {
-  console.log("blogs in blogs Section--->", blogs);
 
   return (
     <section className="mx-5 mb-5">
       <HomeHeading title="Recent Posts" />
-
       <div className="grid grid-cols-1 gap-4 mx-auto my-10">
         {blogs.map((blog, index) => {
           return <Blog key={`home-blog-${index}`} blog={blog} animate />

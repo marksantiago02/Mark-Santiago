@@ -7,17 +7,11 @@ import { useState, useEffect } from 'react'
 import { opacityVariant, popUp } from '@content/FramerMotionVariants'
 import AnimatedDiv from '@components/FramerMotion/AnimatedDiv'
 import { getFormattedDate } from '@utils/date'
-import { DevToArticleType, ProfileType, LikeStatusType, ViewsType } from '@lib/types'
-import TableOfContents from '@components/TableOfContents'
-import cn from 'classnames'
+import { DevToArticleType, ProfileType, LikeStatusType } from '@lib/types'
 import Prism from '../prismSetup'
 import { motion } from 'framer-motion'
-import CommentSection from '@components/BlogComment/CommentSection'
-import CommentList from '@components/BlogComment/CommentList'
-import { AiFillEye, AiFillLike, AiOutlineLike } from 'react-icons/ai'
+import { AiFillEye, AiFillLike } from 'react-icons/ai'
 import useWindowSize from '@hooks/useWindowSize'
-import { addBlogLike, addBlogViews } from '@lib/backendAPI'
-import { useClientID } from '@context/clientIdContext'
 
 export default function BlogLayout({
   blog,
@@ -26,8 +20,6 @@ export default function BlogLayout({
   blog: DevToArticleType
   profileInfo: ProfileType
 }) {
-  console.log("blog in layout--->", blog);
-  // console.log("blog title in layout--->", blog.title);
 
 
   const { currentURL } = useWindowLocation()
@@ -36,7 +28,6 @@ export default function BlogLayout({
   const size = useWindowSize()
   const [blogInfoFull, setBlogInfoFull] = useState(false)
   const [_likeStatus, setLikeStatus] = useState<LikeStatusType>()
-  const BLOG_ENDPOINT = 'https://mark-santiago.vercel.app' + '/blogs/' + blog.slug
 
   // const { clientID } = useClientID()
 
@@ -104,25 +95,9 @@ export default function BlogLayout({
     document.head.removeChild(style)
   }
 
-  // const injectStyle = () => {
-  //   if (hasCode) {
-  //     const style = document.createElement('style')
-  //     style.innerHTML = `
-  //       .text-code code {
-  //         color: #78a5b3
-  //       }
-  //     `
-  //     document.head.appendChild(style)
-  //   }
-  // }
-
   useEffect(() => {
-    // Syntax Highlighting
-    // injectStyle()
-    // Prism JS
     if (typeof window !== 'undefined') {
       Prism.highlightAll()
-      // Prism.plugins.lineNumbers = true
     }
     if (size.width > 1600) {
       setBlogInfoFull(true)
@@ -134,24 +109,12 @@ export default function BlogLayout({
 
   return (
     <section className="mt-[44px] md:mt-[60px] relative !overflow-hidden">
-      {/* TOC */}
-      {/* {blog.table_of_contents != null && blog.table_of_contents.length > 0 && (
-        <div className="hide-on-print">
-          <TableOfContents
-            isTOCActive={isTOCActive}
-            setIsTOCActive={setIsTOCActive}
-            tableOfContents={blog.table_of_contents}
-          />
-        </div>
-      )} */}
-
       {/* Blog Content */}
       <section
-        className="p-5 sm:pt-10 relative font-barlow prose dark:prose-invert md:ml-[30%] lg:ml-[30%] print:!mx-auto bg-darkWhitePrimary dark:bg-darkPrimary"
+        className="p-5 sm:pt-10 relative font-barlow prose dark:prose-invert mx-auto print:!mx-auto bg-darkWhitePrimary dark:bg-darkPrimary"
         style={{
           maxWidth: '900px',
           opacity: isTOCActive ? "0.3" : "1",
-          // margin: blog?.table_of_contents && blog.table_of_contents.length <= 0 ? "auto" : undefined,
         }}
       >
         <ScrollProgressBar />
@@ -200,13 +163,6 @@ export default function BlogLayout({
                 <span className="font-bold">{getFormattedDate(new Date(blog.published_at))}</span>
               </div>
 
-              {/* {getFormattedDate(new Date(blog.created_at)) !== getFormattedDate(new Date(blog.updated_at)) && (
-                <div className="text-base text-gray-500 mb-2">
-                  <span>Last Update: </span>
-                  <span className="font-bold">{getFormattedDate(new Date(blog.updated_at))}</span>
-                </div>
-              )} */}
-
               {blog.type_Of && (
                 <div className="text-base text-gray-500 mb-2">
                   <span>Category: </span>
@@ -217,7 +173,7 @@ export default function BlogLayout({
               {blog.reading_time_minutes && (
                 <div className="text-base text-gray-500">
                   <span>Reading Time: </span>
-                  <span className="font-bold">{blog.reading_time_minutes}</span>
+                  <span className="font-bold">{`${blog.reading_time_minutes} minutes read`}</span>
                 </div>
               )}
 
@@ -254,52 +210,15 @@ export default function BlogLayout({
           </div>
         </div>
 
-        {/* Horizontal Line */}
-        {/* <div className="relative flex mt-5 items-center">
-          <div className="flex-grow border-t border-gray-400"></div>
-          <span className="flex-shrink mx-4 text-gray-700 dark:text-gray-400">Content</span>
-          <div className="flex-grow border-t border-gray-400"></div>
-        </div> */}
-
         {/* Blog Content */}
-
         <AnimatedDiv
           variants={opacityVariant}
           className="my-16 max-w-full prose-sm blog-container sm:prose-base prose-pre:bg-white prose-img:mx-auto prose-img:rounded-md dark:prose-pre:bg-darkSecondary prose-pre:saturate-150 dark:prose-pre:saturate-100 marker:text-black dark:marker:text-white"
         >
           <div
             dangerouslySetInnerHTML={{ __html: cleanBlogHtml(blog.body_html, blog.title) || '' }}
-          // className={cn('my-4', { 'text-code': hasCode, 'line-numbers': hasCode })}
           />
         </AnimatedDiv>
-
-        {/* Like Button */}
-        {/* <div className='print:hidden'>
-          <div className="flex items-center w-full mt-10 mb-5">
-            <div className="cursor-pointer">
-              {fakeLikeStatus === true ? (
-                <AiFillLike
-                  className="w-10 h-10"
-                  onClick={() => {
-                    addLike(blog.slug)
-                    setFakeTotalLikes(fakeTotalLikes - 1)
-                    setFakeLikeStatus(false)
-                  }}
-                />
-              ) : fakeLikeStatus === false ? (
-                <AiOutlineLike
-                  className="w-10 h-10"
-                  onClick={() => {
-                    addLike(blog.slug)
-                    setFakeTotalLikes(fakeTotalLikes + 1)
-                    setFakeLikeStatus(true)
-                  }}
-                />
-              ) : null}
-            </div>
-            <div className="mx-2 font-bold">{fakeTotalLikes}</div>
-          </div>
-        </div> */}
 
         {/* Social Media */}
         <div className="flex flex-col items-center w-full gap-4 my-10 print:hidden">
@@ -317,11 +236,6 @@ export default function BlogLayout({
               <FiPrinter className="w-4 h-4" onClick={() => adjustContentForPrint()} />
             </div>
           </ShareOnSocialMedia>
-        </div>
-
-        <div className="hide-on-print">
-          <CommentSection slug={blog.slug} contentURL={BLOG_ENDPOINT} />
-          <CommentList slug={blog.slug} />
         </div>
       </section>
     </section>

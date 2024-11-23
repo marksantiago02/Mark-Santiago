@@ -329,7 +329,7 @@ export type PageMeta = {
   home: PageData
   stats: PageData
   blogs: PageData
-  certificates: PageData
+  // certificates: PageData
   projects: PageData
   about: PageData
   privacy: PageData

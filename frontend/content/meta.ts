@@ -24,12 +24,12 @@ const pageMeta: PageMeta = {
     image: blogImage,
     keywords: "numanibnmazid blog, marksantiago0929 blog, blog, webdev, react, react blog application, django blog applicaiton, programming blogs, top 10 programming blogs, top programming blogs",
   },
-  certificates: {
-    title: "Certificates",
-    description: "Here, I will showcase the certifications and professional achievements I have earned throughout my career. Each certificate I have obtained represents a milestone in my journey and demonstrates my commitment to excellence.",
-    image: myImage,
-    keywords: "Certificates, verified, portfolio certificates page, portfolio certificates, certificates page certificate page example, certificates example",
-  },
+  // certificates: {
+  //   title: "Certificates",
+  //   description: "Here, I will showcase the certifications and professional achievements I have earned throughout my career. Each certificate I have obtained represents a milestone in my journey and demonstrates my commitment to excellence.",
+  //   image: myImage,
+  //   keywords: "Certificates, verified, portfolio certificates page, portfolio certificates, certificates page certificate page example, certificates example",
+  // },
   projects: {
     title: "Projects",
     description: "I've been making various types of projects some of them were basics and some of them were complicated.",
