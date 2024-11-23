@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 import { opacityVariant, popUp } from '@content/FramerMotionVariants'
 import AnimatedDiv from '@components/FramerMotion/AnimatedDiv'
 import { getFormattedDate } from '@utils/date'
-import { DevToArticleType, ProfileType, LikeStatusType } from '@lib/types'
+import { DevToArticleType, ProfileType } from '@lib/types'
 import Prism from '../prismSetup'
 import { motion } from 'framer-motion'
 import { AiFillEye, AiFillLike } from 'react-icons/ai'
@@ -23,19 +23,9 @@ export default function BlogLayout({
 
 
   const { currentURL } = useWindowLocation()
-  const [isTOCActive, setIsTOCActive] = useState(false)
   // const hasCode = blog && blog.content.includes('<code>')
   const size = useWindowSize()
   const [blogInfoFull, setBlogInfoFull] = useState(false)
-  const [_likeStatus, setLikeStatus] = useState<LikeStatusType>()
-
-  // const { clientID } = useClientID()
-
-  // const addLike = async (slug: string) => {
-  //   if (!clientID) return
-  //   const likeStatusData: LikeStatusType = await addBlogLike(clientID, slug)
-  //   setLikeStatus(likeStatusData)
-  // }
 
   function adjustContentForPrint() {
     // Table of Contents
@@ -114,7 +104,7 @@ export default function BlogLayout({
         className="p-5 sm:pt-10 relative font-barlow prose dark:prose-invert mx-auto print:!mx-auto bg-darkWhitePrimary dark:bg-darkPrimary"
         style={{
           maxWidth: '900px',
-          opacity: isTOCActive ? "0.3" : "1",
+          opacity: "1",
         }}
       >
         <ScrollProgressBar />
@@ -197,7 +187,7 @@ export default function BlogLayout({
             {blog.tags && (
               <div className="flex flex-wrap items-center gap-1 hide-on-print">
                 <span className="text-base text-gray-500">Tags: </span>
-                {(blog.tags as string[]).map((tag, index) => (
+                {(blog.tags as unknown as string[]).map((tag, index) => (
                   <span
                     key={`${tag}-${index}`}
                     className="px-2 py-1 text-xs rounded bg-teal-800 text-gray-50"

@@ -115,6 +115,7 @@ export type ExperienceType = {
 export type DevToArticleType = {
   id: number;
   title: string;
+  body_html: string;
   description: string;
   published_at: string;
   slug: string;
