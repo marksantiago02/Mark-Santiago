@@ -139,11 +139,11 @@ module.exports = withPWA({
       },
       {
         protocol: 'https',
-        hostname: 'dev-to-uploads.s3.amazonaws.com'
+        hostname: 'github-readme-stats-one-bice.vercel.app'
       },
       {
         protocol: 'https',
-        hostname: 'github-readme-stats-one-bice.vercel.app'
+        hostname: 'dev-to-uploads.s3.amazonaws.com'
       },
       {
         protocol: 'https',
