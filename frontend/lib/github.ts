@@ -1,6 +1,6 @@
 import { GithubRepo } from "./types"
 
-const GitHubAccessToken = process.env.GITHUB_ACCESS_TOKEN
+const GitHubAccessToken = process.env.GITH_ACCESS_TOKEN
 
 const tempData = {
   "login": "BTC415",
