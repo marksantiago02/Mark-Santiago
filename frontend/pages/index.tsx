@@ -62,7 +62,6 @@ export default function Home() {
     return null;
   }
 
-  console.log("blogsData------->", blogsData);
   const latest_experience: ExperienceType = Experience[0];
 
   return (

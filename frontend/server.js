@@ -34,7 +34,6 @@ app
 
       // Continue handling the request
       handle(req, res, parsedUrl);
-      // console.log('pathname', pathname);
     }).listen(port, (err) => {
       if (err) throw err;
       console.log(`> Ready on http://localhost:${port}`);

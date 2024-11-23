@@ -16,7 +16,6 @@ import dynamic from 'next/dynamic'
 import Experience from "@content/Experience"
 import Skills from "@content/Skills"
 import Educations from "@content/Education"
-import Certificate from "@content/Certificates"
 import Interest from "@content/Interest"
 
 const SkillSection = dynamic(() => import('@components/Home/SkillSection'), {
@@ -28,10 +27,6 @@ const ExperienceSection = dynamic(() => import('@components/Home/ExperienceSecti
 })
 
 const Education = dynamic(() => import('@components/Education'), {
-  loading: () => <Loader />,
-})
-
-const Certificates = dynamic(() => import('@components/Certificates'), {
   loading: () => <Loader />,
 })
 
@@ -50,7 +45,6 @@ export default function About({
   const [experiencesLoading, setExperiencesLoading] = useState(true)
   const [skillsLoading, setSkillsLoading] = useState(true)
   const [educationsLoading, setEducationsLoading] = useState(true)
-  const [certificatesLoading, setCertificatesLoading] = useState(true)
   const [interestsLoading, setInterestsLoading] = useState(true)
 
   useEffect(() => {
@@ -59,7 +53,6 @@ export default function About({
     }
     if (Skills.length) setSkillsLoading(false);
     if (Educations.length) setEducationsLoading(false);
-    if (Certificate.length) setCertificatesLoading(false);
     if (Interest.length) setInterestsLoading(false)
   }, [])
 
@@ -81,9 +74,6 @@ export default function About({
               variants={headingFromLeft}
             >
               <span className="mr-2">Work Experiences</span>
-              {/* <span className="px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded-full">
-                {Experience.length}
-              </span> */}
             </AnimatedHeading>
             {experiencesLoading ? (
               <Loader />
@@ -109,16 +99,6 @@ export default function About({
               <Loader />
             ) : Educations.length > 0 ? (
               <Education educations={Educations} showHomeHeading={false} />
-            ) : (
-              <NoData />
-            )}
-
-            {/* Certificates */}
-            <HomeHeading title="Certificates" />
-            {certificatesLoading ? (
-              <Loader />
-            ) : Certificate.length > 0 ? (
-              <Certificates certificates={Certificate} showHomeHeading={false} />
             ) : (
               <NoData />
             )}

@@ -1,22 +1,18 @@
 import Link from 'next/link'
 import { getFormattedDate } from '@utils/date'
 import { DevToArticleType } from '@lib/types'
-// import { useRef } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { BlogCardAnimation } from '@content/FramerMotionVariants'
 import { AiOutlineComment, AiFillLike } from 'react-icons/ai'
 
 export default function Blog({ blog, animate = false }: { blog: DevToArticleType; animate?: boolean }) {
-  // const blogRef = useRef(null)
   const readingTime = blog.reading_time_minutes
-  console.log("blog--->", blog);
 
   return (
     <div>
       <Link href={`blogs/${blog?.slug}`} title="View Blog Details">
         <motion.article
-          // ref={blogRef}
           variants={BlogCardAnimation}
           initial={animate && 'hidden'}
           whileInView={animate ? 'visible' : ''}
@@ -30,7 +26,6 @@ export default function Blog({ blog, animate = false }: { blog: DevToArticleType
               src={blog.cover_image}
               width={1200}
               height={600}
-              // blurDataURL={blog.cover_image}
               quality={50}
               priority={false}
               className="my-auto transition-all duration-300 backdrop-blur-xl rounded-xl w-full"
@@ -76,7 +71,7 @@ export default function Blog({ blog, animate = false }: { blog: DevToArticleType
               </div>
               { readingTime && (
                 <p className="flex items-center justify-between text-xs font-medium text-gray-500 dark:text-dark-3 md:text-sm">
-                  <span className="px-2 py-1 text-xs rounded bg-gray-700 text-gray-50">{readingTime}</span>
+                  <span className="px-2 py-1 text-xs rounded bg-gray-700 text-gray-50">{`${readingTime} minutes read`}</span>
                 </p>
               )}
             </div>

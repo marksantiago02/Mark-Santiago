@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import useSWR from "swr"
 import { FadeContainer } from "@content/FramerMotionVariants"
 import fetcher from "@lib/fetcher"
@@ -14,6 +14,7 @@ type Stats = {
 };
 
 export default function Stats() {
+  const [mounted, setMounted] = useState(false);
   const { data: github } = useSWR("/api/stats/github", fetcher)
 
   const stats: Stats[] = [
@@ -35,6 +36,18 @@ export default function Stats() {
     }
   ]
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <section className="pageTop font-inter bg-darkWhitePrimary dark:bg-darkPrimary">
+        <HomeHeading title="Statistics" />
+      </section>
+    );
+  }
+
   return (
     <>
       <MetaData
@@ -49,7 +62,6 @@ export default function Stats() {
 
         <p>Here are some statistics about my personal github.</p>
 
-        {/* Blogs and github stats */}
         <AnimatedDiv
           className="my-10"
           variants={FadeContainer}
@@ -60,8 +72,9 @@ export default function Stats() {
             ))}
           </div>
         </AnimatedDiv>
-        <div className="flex justify-center w-full m-2">
-          <a href="https://github.com/BTC415?tab=repositories" >
+        
+        <div className="flex justify-center w-full my-2">
+          <a href="https://github.com/BTC415?tab=repositories">
             <img src="https://github-readme-stats-one-bice.vercel.app/api?username=BTC415&theme=gotham&show_icons=true&count_private=true&hide_border=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR" className="w-full p-2" alt="@BTC415's github-readme-stats" />
           </a>
 
@@ -70,7 +83,6 @@ export default function Stats() {
           </a>
         </div>
       </section>
-
     </>
   )
 }
