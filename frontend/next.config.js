@@ -5,7 +5,7 @@
 const path = require('path')
 const dotenv = require('dotenv')
 
-dotenv.config({path: '../.env'})
+dotenv.config({ path: '../.env' })
 
 const runtimeCaching = require("next-pwa/cache")
 
@@ -120,7 +120,10 @@ module.exports = withPWA({
   },
   swcMinify: true,
   reactStrictMode: true,
- images: {
+  images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
@@ -137,6 +140,14 @@ module.exports = withPWA({
       {
         protocol: 'https',
         hostname: 'dev-to-uploads.s3.amazonaws.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'github-readme-stats-one-bice.vercel.app'
+      },
+      {
+        protocol: 'https',
+        hostname: 'github-readme-streak-stats.herokuapp.com'
       }
     ]
   },
@@ -146,19 +157,19 @@ module.exports = withPWA({
   eslint: {
     ignoreDuringBuilds: false,
   },
-  env:{
-    BACKEND_API_BASE_URL : process.env.BACKEND_API_BASE_URL,
-    BACKEND_API_TOKEN : process.env.BACKEND_API_TOKEN,
-    GITH_ACCESS_TOKEN : process.env.GITH_ACCESS_TOKEN,
-    EMAIL_JS_SERVICE_ID : process.env.EMAIL_JS_SERVICE_ID,
-    EMAIL_JS_TEMPLATE_ID : process.env.EMAIL_JS_TEMPLATE_ID,
-    EMAIL_JS_COMMENT_TEMPLATE_ID : process.env.EMAIL_JS_COMMENT_TEMPLATE_ID,
-    EMAIL_JS_PUBLIC_KEY : process.env.EMAIL_JS_PUBLIC_KEY,
-    NEXT_PUBLIC_GA_MEASUREMENT_ID : process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
-    GA_PROPERTY_ID : process.env.GA_PROPERTY_ID,
-    GA_PROJECT_ID : process.env.GA_PROJECT_ID,
-    GA_CLIENT_EMAIL : process.env.GA_CLIENT_EMAIL,
-    GA_PRIVATE_KEY : process.env.GA_PRIVATE_KEY,
-    DARKSTAR_GOOGLE_API_KEY : process.env.DARKSTAR_GOOGLE_API_KEY,
+  env: {
+    BACKEND_API_BASE_URL: process.env.BACKEND_API_BASE_URL,
+    BACKEND_API_TOKEN: process.env.BACKEND_API_TOKEN,
+    GITH_ACCESS_TOKEN: process.env.GITH_ACCESS_TOKEN,
+    EMAIL_JS_SERVICE_ID: process.env.EMAIL_JS_SERVICE_ID,
+    EMAIL_JS_TEMPLATE_ID: process.env.EMAIL_JS_TEMPLATE_ID,
+    EMAIL_JS_COMMENT_TEMPLATE_ID: process.env.EMAIL_JS_COMMENT_TEMPLATE_ID,
+    EMAIL_JS_PUBLIC_KEY: process.env.EMAIL_JS_PUBLIC_KEY,
+    NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+    GA_PROPERTY_ID: process.env.GA_PROPERTY_ID,
+    GA_PROJECT_ID: process.env.GA_PROJECT_ID,
+    GA_CLIENT_EMAIL: process.env.GA_CLIENT_EMAIL,
+    GA_PRIVATE_KEY: process.env.GA_PRIVATE_KEY,
+    DARKSTAR_GOOGLE_API_KEY: process.env.DARKSTAR_GOOGLE_API_KEY,
   }
 })
