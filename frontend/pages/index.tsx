@@ -16,7 +16,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { profileInfo } from '@utils/data/profileInfo'
 import { ExperienceType, DevToArticleType } from '@lib/types'
-import { BsGithub, BsLinkedin, BsTwitter, BsFacebook } from 'react-icons/bs'
+import { BsGithub, BsLinkedin, BsTwitter, BsFacebook, BsInstagram } from 'react-icons/bs'
 import Loader from '@components/Loader'
 import NoData from "@components/NoData"
 import Experience from '@content/Experience';
@@ -181,6 +181,18 @@ export default function Home() {
                     rel="noopener noreferrer"
                   >
                     <BsTwitter className="w-full h-full transition-all hover:scale-110 active:scale-90" />
+                  </Link>
+                </div>
+
+                {/* Instagram */}
+                <div className="w-6 h-6 mt-2 mr-2">
+                  <Link
+                    href={profileInfo.instagram}
+                    title="Instagram Profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <BsInstagram className="w-full h-full transition-all hover:scale-110 active:scale-90" />
                   </Link>
                 </div>
 

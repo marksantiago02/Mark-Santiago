@@ -17,12 +17,12 @@ const socialMedia: SocialPlatform[] = [
   {
     title: "Instagram",
     Icon: AiOutlineInstagram,
-    url: "https://www.instagram.com/MarkSantiago02/",
+    url: "https://www.instagram.com/marksantiago_0929/",
   },
   {
     title: "Facebook",
     Icon: BsFacebook,
-    url: "https://www.facebook.com/profile.php?id=61561446326312&mibextid=ZbWKwL",
+    url: "https://www.facebook.com/profile.php?id=61569628505488&mibextid=ZbWKwL",
   },
     {
     title: "Twitter",
