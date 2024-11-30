@@ -27,17 +27,16 @@ const tempData = {
   "blog": "",
   "location": "Angeles, Philippines",
   "email": null,
-  "hireable": null,
+  "hireable": true,
   "bio": "A critical and forward thinking fullstack developer && blockchain engineer",
-  "twitter_username": null,
-  "public_repos": 95,
+  "twitter_username": "MarkSantiago02",
+  "public_repos": 97,
   "public_gists": 0,
-  "followers": 658,
+  "followers": 656,
   "following": 7,
   "created_at": "2023-05-11T21:47:48Z",
-  "updated_at": "2024-11-21T08:32:27Z"
+  "updated_at": "2024-11-30T14:05:56Z"
 }
-
 
 // its for /api/stats/github
 export async function fetchGithub() {

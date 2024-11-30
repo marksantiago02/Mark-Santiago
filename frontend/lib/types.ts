@@ -28,6 +28,7 @@ export type ProfileType = {
   about: string
   contact: string
   twitter: string
+  instagram:string
   facebook: string
   linkedin: string
   github: string
