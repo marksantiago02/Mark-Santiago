@@ -48,7 +48,7 @@ const Project = [
         id: "4",
         title: "BollyGaming Casino Game",
         slug: "BollyGamingCasinoGame",
-        image: '/images/Projects/VVSL.PNG',
+        image: '/images/Projects/VVSL.png',
         short_description: "A B2B Casino Game Platform",
         technology: "Casino Game, B2B, Slot Game, Aviator, Lucky Wheel, Heads or Tails",
         duration: "Jul 2021 ~ Apr 2022",
