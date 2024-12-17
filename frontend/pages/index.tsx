@@ -1,28 +1,26 @@
 'use client'
-// Page Components START
 import Image from 'next/image'
+import React, { useEffect, useState }  from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { BsGithub, BsLinkedin, BsTwitter, BsFacebook, BsInstagram } from 'react-icons/bs'
+import { FiDownload } from 'react-icons/fi'
 import Metadata from '@components/MetaData'
-import { FadeContainer, headingFromLeft, opacityVariant, popUp } from '@content/FramerMotionVariants'
 import AnimatedHeading from '@components/FramerMotion/AnimatedHeading'
-import { homeProfileImage } from '@utils/utils'
 import getRSS from '@lib/generateRSS'
 import generateSitemap from '@lib/sitemap'
-import { motion } from 'framer-motion'
-import { FiDownload } from 'react-icons/fi'
 import pageMeta from '@content/meta'
 import staticData from '@content/StaticData'
-import React from 'react'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { profileInfo } from '@utils/data/profileInfo'
-import { ExperienceType, DevToArticleType } from '@lib/types'
-import { BsGithub, BsLinkedin, BsTwitter, BsFacebook, BsInstagram } from 'react-icons/bs'
 import Loader from '@components/Loader'
 import NoData from "@components/NoData"
-import Experience from '@content/Experience';
 import ExperienceSection from '@components/Home/ExperienceSection'
 import BlogsSection from '@components/Home/BlogsSection'
 import Contact from '@components/Contact'
+import Experience from '@content/Experience';
+import { profileInfo } from '@utils/data/profileInfo'
+import { ExperienceType, DevToArticleType } from '@lib/types'
+import { FadeContainer, headingFromLeft, opacityVariant, popUp } from '@content/FramerMotionVariants'
+import { homeProfileImage } from '@utils/utils'
 
 export default function Home() {
   // Loaders
