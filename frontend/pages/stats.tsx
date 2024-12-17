@@ -4,10 +4,10 @@ import Image from "next/image"
 import useSWR from "swr"
 import { FadeContainer } from "@content/FramerMotionVariants"
 import fetcher from "@lib/fetcher"
+import AnimatedDiv from "@components/FramerMotion/AnimatedDiv"
 import MetaData from "@components/MetaData"
 import StatsCard from "@components/Stats/StatsCard"
 import pageMeta from "@content/meta"
-import AnimatedDiv from "@components/FramerMotion/AnimatedDiv"
 import { HomeHeading } from '../pages'
 
 type Stats = {
@@ -61,9 +61,7 @@ export default function Stats() {
 
       <section className="pageTop font-inter bg-darkWhitePrimary dark:bg-darkPrimary">
         <HomeHeading title="Statistics" />
-
         <p>Here are some statistics about my personal github.</p>
-
         <AnimatedDiv
           className="my-10"
           variants={FadeContainer}
@@ -85,7 +83,6 @@ export default function Stats() {
               height={195}
             />
           </Link>
-
           <Link href="https://github.com/BTC415?tab=stars">
             <Image
               src="https://github-readme-streak-stats.herokuapp.com?user=BTC415&theme=gotham&hide_border=true&date_format=M%20j%5B%2C%20Y%5D"
