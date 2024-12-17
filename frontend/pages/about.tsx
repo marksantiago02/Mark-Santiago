@@ -1,22 +1,23 @@
+import { useEffect, useState } from 'react'
+import { motion } from "framer-motion"
+import dynamic from 'next/dynamic'
+
 import MDXContent from "@lib/MDXContent"
 import pageMeta from "@content/meta"
 import {
   PostType,
 } from '@lib/types'
 import StaticPage from "@components/StaticPage"
-import { useEffect, useState } from 'react'
-import { motion } from "framer-motion"
 import { FadeContainer } from "@content/FramerMotionVariants"
 import Loader from '@components/Loader'
 import NoData from "@components/NoData"
-import { HomeHeading } from '../pages'
 import AnimatedHeading from '@components/FramerMotion/AnimatedHeading'
 import { headingFromLeft } from '@content/FramerMotionVariants'
-import dynamic from 'next/dynamic'
 import Experience from "@content/Experience"
 import Skills from "@content/Skills"
 import Educations from "@content/Education"
 import Interest from "@content/Interest"
+import { HomeHeading } from '../pages'
 
 const SkillSection = dynamic(() => import('@components/Home/SkillSection'), {
   loading: () => <Loader />,
@@ -33,7 +34,6 @@ const Education = dynamic(() => import('@components/Education'), {
 const InterestSection = dynamic(() => import('@components/Interest'), {
   loading: () => <Loader />,
 })
-
 
 export default function About({
   about
