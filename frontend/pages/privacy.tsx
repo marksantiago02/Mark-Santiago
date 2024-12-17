@@ -1,5 +1,5 @@
-import StaticPage from "@components/StaticPage";
 import pageMeta from "@content/meta";
+import StaticPage from "@components/StaticPage";
 import MDXContent from "@lib/MDXContent";
 import { PostType } from "@lib/types";
 
