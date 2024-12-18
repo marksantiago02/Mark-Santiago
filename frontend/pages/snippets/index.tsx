@@ -1,14 +1,14 @@
+import React, { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { AnimatePresence } from 'framer-motion'
-import { FadeContainer } from '@content/FramerMotionVariants'
 import Metadata from '@components/MetaData'
 import AnimatedDiv from '@components/FramerMotion/AnimatedDiv'
 import PageTop from '@components/PageTop'
 import pageMeta from '@content/meta'
-import { useEffect, useState } from 'react'
 import Loader from '@components/Loader'
 import NoData from '@components/NoData'
-import dynamic from 'next/dynamic'
 import CodeSnipsets from '@content/CodeSnipset'
+import { FadeContainer } from '@content/FramerMotionVariants'
 
 const SnippetCard = dynamic(() => import('@components/SnippetCard'), {
   loading: () => <Loader />,
