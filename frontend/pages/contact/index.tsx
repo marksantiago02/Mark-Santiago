@@ -1,12 +1,12 @@
+import React from 'react'
 import { motion } from 'framer-motion'
 import AnimatedText from '@components/FramerMotion/AnimatedText'
 import AnimatedDiv from '@components/FramerMotion/AnimatedDiv'
 import AnimatedHeading from '@components/FramerMotion/AnimatedHeading'
-import React from 'react'
-import { opacityVariant, popUpFromBottomForText, FadeContainer } from '@content/FramerMotionVariants'
-import ContactForm from './ContactForm'
 import Metadata from '@components/MetaData'
 import pageMeta from '@content/meta'
+import ContactForm from './ContactForm'
+import { opacityVariant, popUpFromBottomForText, FadeContainer } from '@content/FramerMotionVariants'
 
 export default function ContactSection() {
   return (
