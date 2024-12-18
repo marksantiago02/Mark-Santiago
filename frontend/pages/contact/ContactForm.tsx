@@ -1,15 +1,14 @@
-import React from "react"
+import React, { useRef } from "react"
+import Ripples from "react-ripples"
 import { ToastContainer, toast } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.min.css'
+import { motion } from "framer-motion"
 import { useDarkMode } from "@context/darkModeContext"
 import emailjs from "@emailjs/browser"
-import { motion } from "framer-motion"
 import {
   FadeContainer,
   mobileNavItemSideways,
 } from "@content/FramerMotionVariants"
-import Ripples from "react-ripples"
-import { useRef } from "react"
 import { FormInput } from "@lib/types"
 
 export default function Form() {
