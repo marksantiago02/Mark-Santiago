@@ -1,14 +1,13 @@
 import "@styles/globals.css"
-import Layout from "@layout/Layout"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
-// @ts-ignore
+import { AppProps } from "next/app"
 import NProgress from "nprogress"
 import "nprogress/nprogress.css"
+import Layout from "@layout/Layout"
 import { DarkModeProvider } from "@context/darkModeContext"
 import { ClientIDProvider } from '@context/clientIdContext'
 import { GoogleAnalytics } from "nextjs-google-analytics"
-import { AppProps } from "next/app"
 
 NProgress.configure({
   easing: "ease",
