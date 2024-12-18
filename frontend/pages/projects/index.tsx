@@ -1,18 +1,16 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import dynamic from 'next/dynamic'
 import { motion } from "framer-motion"
 import { FadeContainer } from "@content/FramerMotionVariants"
-import { useEffect, useState } from "react"
 import Loader from "@components/Loader"
 import NoData from "@components/NoData"
 import Metadata from '@components/MetaData'
 import pageMeta from '@content/meta'
-import dynamic from 'next/dynamic'
 import Project from '@content/Project'
 
 const ProjectSection = dynamic(() => import('@components/ProjectSection'), {
   loading: () => <Loader />,
 })
-
 
 export default function Projects() {
   const [isLoading, setIsLoading] = useState(true)
@@ -48,7 +46,6 @@ export default function Projects() {
       ) : (
         <NoData />
       )}
-      
     </>
   )
 }
