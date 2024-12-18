@@ -41,9 +41,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
 
-        {/* Inter */}
         <link rel="preload" href="/fonts/Inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        {/* Sarina */}
         <link
           rel="preload"
           href="/fonts/Sarina/Sarina-400.woff2"
