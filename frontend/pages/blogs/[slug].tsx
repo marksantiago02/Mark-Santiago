@@ -1,11 +1,11 @@
-import { DevToArticleType } from '@lib/types'
 import { useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
+import { DevToArticleType } from '@lib/types'
 import Loader from "@components/Loader"
 import NoData from "@components/NoData"
 import MetaData from '@components/MetaData'
 import pageMeta from '@content/meta'
-import dynamic from 'next/dynamic'
 import { profileInfo } from '@utils/data/profileInfo'
 
 const BlogLayout = dynamic(() => import('@layout/BlogLayout'), {
@@ -27,7 +27,7 @@ export default function BlogDetails() {
     fetch(`https://dev.to/api/articles/${profileInfo.devUsername}/${slug}`)
       .then(res => {
         if (!res.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('Network response was not so good');
         }
         return res.json();
       })
