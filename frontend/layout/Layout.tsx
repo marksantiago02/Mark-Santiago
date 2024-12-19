@@ -1,9 +1,10 @@
 import React, { useState } from "react"
+import Image from 'next/image'
+
 import TopNavbar from "../components/TopNavbar"
 import ScrollToTopButton from "../components/ScrollToTopButton"
 import Footer from "../components/Footer"
 import QRCodeContainer from "@components/QRCodeContainer"
-import Image from 'next/image'
 import BackgroundImage from "/public/images/background-image.png"
 import BackgroundAVIF from "/public/images/background.avif"
 import DarkBackgroundImage from "/public/images/dark-background-image.png"

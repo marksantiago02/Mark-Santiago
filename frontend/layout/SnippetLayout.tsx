@@ -1,17 +1,18 @@
+import { useEffect, useState } from 'react'
+import { FiPrinter } from 'react-icons/fi'
+import { AiFillEye, AiFillLike, AiOutlineLike } from 'react-icons/ai'
+import Image from "next/image"
+import cn from 'classnames'
+
+import { CodeSnippetType, LikeStatusType, ViewsType } from '@lib/types'
 import { opacityVariant } from "@content/FramerMotionVariants"
 import AnimatedDiv from "@components/FramerMotion/AnimatedDiv"
 import ShareOnSocialMedia from '../components/ShareOnSocialMedia'
-import { FiPrinter } from 'react-icons/fi'
 import useWindowLocation from '@hooks/useWindowLocation'
-import { CodeSnippetType, LikeStatusType, ViewsType } from '@lib/types'
-import Image from "next/image"
-import cn from 'classnames'
-import { useEffect, useState } from 'react'
 import { getFormattedDate } from "@utils/date"
 import Prism from '../prismSetup'
 import CommentSection from '@components/SnippetComment/CommentSection'
 import CommentList from '@components/SnippetComment/CommentList'
-import { AiFillEye, AiFillLike, AiOutlineLike } from 'react-icons/ai'
 import { addSnippetLike, addSnippetViews } from '@lib/backendAPI'
 import { useClientID } from '@context/clientIdContext'
 
