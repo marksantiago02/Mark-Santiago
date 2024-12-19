@@ -181,11 +181,11 @@ export default function SnippetLayout({
 
         {getFormattedDate(new Date(code_snippet.created_at)) !==
           getFormattedDate(new Date(code_snippet.updated_at)) && (
-          <div className="text-base text-gray-500">
-            <span>Last Update: </span>
-            {getFormattedDate(new Date(code_snippet.updated_at))}
-          </div>
-        )}
+            <div className="text-base text-gray-500">
+              <span>Last Update: </span>
+              {getFormattedDate(new Date(code_snippet.updated_at))}
+            </div>
+          )}
 
         {/* Content */}
         <AnimatedDiv
