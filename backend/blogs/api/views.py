@@ -13,7 +13,6 @@ from blogs.api.serializers import BlogSerializer, BlogCommentSerializer, BlogVie
 from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 
-
 @custom_response_wrapper
 class BlogViewset(GenericViewSet, ListModelMixin, RetrieveModelMixin):
     permission_classes = (permissions.IsAuthenticated,)
@@ -54,7 +53,6 @@ class BlogViewset(GenericViewSet, ListModelMixin, RetrieveModelMixin):
                 pass
 
         return queryset
-
 
 @custom_response_wrapper
 class BlogCommentViewset(GenericViewSet, CreateModelMixin, ListModelMixin):
@@ -100,7 +98,6 @@ class BlogCommentViewset(GenericViewSet, CreateModelMixin, ListModelMixin):
             )
 
         return Response(data=serializer.data, status=200)
-
 
 class BlogViewViewset(GenericViewSet, CreateModelMixin):
     permission_classes = (permissions.IsAuthenticated,)
