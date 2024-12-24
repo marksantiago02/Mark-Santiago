@@ -1,12 +1,10 @@
 from rest_framework import serializers
 from blogs.models import Blog, BlogCategory, BlogComment, BlogView
 
-
 class BlogCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = BlogCategory
         fields = "__all__"
-
 
 class BlogSerializer(serializers.ModelSerializer):
     category = BlogCategorySerializer()
@@ -35,7 +33,6 @@ class BlogSerializer(serializers.ModelSerializer):
                 return blog_view.liked
         return False
 
-
 class BlogCommentSerializer(serializers.ModelSerializer):
     timestamp = serializers.SerializerMethodField()
 
@@ -46,7 +43,6 @@ class BlogCommentSerializer(serializers.ModelSerializer):
 
     def get_timestamp(self, obj):
         return obj.get_timestamp()
-
 
 class BlogViewSerializer(serializers.ModelSerializer):
     class Meta:
