@@ -210,7 +210,7 @@ export default function Home() {
             </div>
 
             {/* Resume Download Button */}
-            <Link
+            {/* <Link
               href={profileInfo.resume_link}
               target="_blank"
               rel="noopener noreferrer"
@@ -218,7 +218,7 @@ export default function Home() {
             >
               <FiDownload />
               <p>Resume</p>
-            </Link>
+            </Link> */}
           </div>
         </motion.section>
 
