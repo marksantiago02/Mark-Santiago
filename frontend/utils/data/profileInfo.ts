@@ -1,5 +1,5 @@
 import { ProfileType } from "@lib/types";
-import mark from "../../public/images/mark.jpg";
+import mark from "../../public/images/Mark.png";
 
 export const profileInfo: ProfileType = {
   email: "marksantiago0929@gmail.com",

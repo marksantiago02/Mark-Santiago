@@ -1,6 +1,6 @@
 import { PageMeta } from "@lib/types"
 
-const myImage = "/images/mark.jpg"
+const myImage = "/images/Mark.png"
 const blogImage = "https://i.postimg.cc/dVQkjgxp/blog.png"
 
 
