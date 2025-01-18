@@ -60,6 +60,22 @@ const Project = [
         updated_at: "23 Feb 2024",
     },
     {
+        id: "5",
+        title: "EventSmarter",
+        slug: "EventSmarter",
+        image: '/images/Projects/eventsmarter.jpg',
+        short_description: "Onsite Event Check-in Software",
+        technology: "React, Node.js, MongoDB, Express.js, Socket.io",
+        duration: "Aug 2022 ~ Sep 2022",
+        duration_in_days: "4 Months",
+        preview_url: "https://www.eventssmarter.com/",
+        github_url: "https://github.com/BTC415/eventsmarter",
+        description: "Events Smarter is a platform designed for the entertainment and event industries that facilitates ticket buying and selling.",
+        created_at: "03 Aug 2022",
+        updated_at: "29 Sep 2022",
+    },
+    
+    {
         id: "7",
         title: "BollyGaming Casino Game",
         slug: "BollyGamingCasinoGame",
