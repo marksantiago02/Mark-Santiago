@@ -98,9 +98,9 @@ export default function Home() {
               <div className="flex flex-col gap-1">
                 <motion.h1 variants={opacityVariant} className="text-5xl font-bold lg:text-6xl font-arial">
                   {profileInfo?.name || staticData.personal.name}
-                  <span className="ml-4 text-5xl font-light">
+                  {/* <span className="ml-4 text-5xl font-light">
                     ({profileInfo?.nickname || staticData.personal.nickname})
-                  </span>
+                  </span> */}
                 </motion.h1>
                 <motion.p
                   variants={opacityVariant}
@@ -226,7 +226,7 @@ export default function Home() {
           <HomeHeading title="Work Experiences" />
           <ExperienceSection experiences={Experience} />
 
-          <HomeHeading title="Blogs" />
+          <HomeHeading title="" />
           {blogsLoading ? (
             <Loader />
           ) : blogsData?.length > 0 ? (
