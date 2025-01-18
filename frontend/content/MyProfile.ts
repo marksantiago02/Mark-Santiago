@@ -6,7 +6,7 @@ const MyProfile = {
     slug: "marksantiago",
     nickname: "BTC415",
     gender: "M",
-    image: '/images/mark.jpg',
+    image: '/images/Mark.png',
     dob: "string",
     website: "string",
     contact: "string",
