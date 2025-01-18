@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React, { useEffect, useState }  from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { BsGithub, BsLinkedin, BsTwitter, BsFacebook, BsInstagram } from 'react-icons/bs'
@@ -42,7 +42,7 @@ export default function Home() {
       .then(data => {
         const sortedData = Array.isArray(data) ? data.sort((b, a) =>
           new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
-        ) : [];
+        ).slice(0, 3) : [];
         if (sortedData.length > 0) {
           setBlogsData(sortedData);
         }
