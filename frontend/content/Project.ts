@@ -58,6 +58,21 @@ const Project = [
         description: "A casino slot games, aviator, lucky wheel, heads or tails game using React and Pixijs",
         created_at: "05 Jul 2021",
         updated_at: "25 Apr 2022",
+    },
+    {
+        id: "5",
+        title: "BollyGaming Casino Game",
+        slug: "BollyGamingCasinoGame",
+        image: '/images/Projects/aviator.png',
+        short_description: "A B2B Casino Game Platform",
+        technology: "Casino Game, B2B, Slot Game, Aviator, Lucky Wheel, Heads or Tails",
+        duration: "Jul 2021 ~ Apr 2022",
+        duration_in_days: "10 Months",
+        preview_url: "https://lobbyuat.bollygaming.games/aviator/?token=c42ca54b-0e44-4348-95c5-f0c058334847",
+        github_url: "https://github.com/BTC415/Casino_slot",
+        description: "A casino slot games, aviator, lucky wheel, heads or tails game using React and Pixijs",
+        created_at: "05 Jul 2021",
+        updated_at: "25 Apr 2022",
     }    
 ];
 
