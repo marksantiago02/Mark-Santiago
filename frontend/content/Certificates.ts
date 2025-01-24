@@ -10,7 +10,7 @@ const Certificate = [
         credential_id: "350A6A3F72F1",
         created_at: "24 Jan 2025",
         updated_at: "24 Jan 2025",
-        link: "https://www.hackerrank.com/certificates/350a6a3f72f1",
+        link: "https://www.hackerrank.com/certificates/350A6A3F72F1",
     },
     {
         id: "2",
