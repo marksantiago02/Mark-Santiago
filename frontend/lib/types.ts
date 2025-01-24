@@ -178,6 +178,7 @@ export type CertificateType = {
   certification_media?: MediaType[]
   created_at: string
   updated_at: string
+  link: string
 }
 
 export type InterestType = {

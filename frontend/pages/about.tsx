@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 import dynamic from 'next/dynamic'
-
 import MDXContent from "@lib/MDXContent"
 import pageMeta from "@content/meta"
 import {
@@ -17,6 +16,7 @@ import Experience from "@content/Experience"
 import Skills from "@content/Skills"
 import Educations from "@content/Education"
 import Interest from "@content/Interest"
+import Certificate from "@content/Certificates"
 import { HomeHeading } from '../pages'
 
 const SkillSection = dynamic(() => import('@components/Home/SkillSection'), {
@@ -35,6 +35,10 @@ const InterestSection = dynamic(() => import('@components/Interest'), {
   loading: () => <Loader />,
 })
 
+const Certificates = dynamic(() => import('@components/Certificates'), {
+  loading: () => <Loader />,
+})
+
 export default function About({
   about
 }: {
@@ -46,13 +50,15 @@ export default function About({
   const [skillsLoading, setSkillsLoading] = useState(true)
   const [educationsLoading, setEducationsLoading] = useState(true)
   const [interestsLoading, setInterestsLoading] = useState(true)
+  const [certificatesLoading, setCertificatesLoading] = useState(true)
 
   useEffect(() => {
-    if(Experience.length) {
+    if (Experience.length) {
       setExperiencesLoading(false);
     }
     if (Skills.length) setSkillsLoading(false);
     if (Educations.length) setEducationsLoading(false);
+    if (Certificate.length) setCertificatesLoading(false)
     if (Interest.length) setInterestsLoading(false)
   }, [])
 
@@ -99,6 +105,16 @@ export default function About({
               <Loader />
             ) : Educations.length > 0 ? (
               <Education educations={Educations} showHomeHeading={false} />
+            ) : (
+              <NoData />
+            )}
+
+            {/* Certificates */}
+            <HomeHeading title="Certificates" />
+            {certificatesLoading ? (
+              <Loader />
+            ) : Certificate.length > 0 ? (
+              <Certificates certificates={Certificate} showHomeHeading={false} />
             ) : (
               <NoData />
             )}
