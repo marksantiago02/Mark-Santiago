@@ -19,9 +19,8 @@ export default function Footer({
   setShowQR: (value: boolean) => void
   showQR: boolean
 }) {
-  // const { data: visitors } = useSWR("/api/ga", fetcher)
   const { isDarkMode } = useDarkMode()
-  const visitors = 325;
+  const visitors =  50;
 
   const footerClass = isDarkMode ? 'footer-with-rays-dark' : 'footer-with-rays'
 

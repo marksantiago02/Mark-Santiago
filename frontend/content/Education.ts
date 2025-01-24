@@ -8,7 +8,7 @@ const Educations = [
         address: "Angeles City, Pampanga, Philippines",
         field_of_study: "Computer Science",
         duration: "Apr 2018 ~ May 2021",
-        grade: "School of Computing / CGPA 4.52 out of 5.00",
+        grade: "School of Computing / GPA 3.2 out of 4.0",
         created_at: "May 07 2021",
         updated_at: "May 07 2021",
     },
