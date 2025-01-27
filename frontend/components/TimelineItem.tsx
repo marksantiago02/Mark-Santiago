@@ -1,6 +1,5 @@
 import Image from "next/image"
 
-
 type Props = {
   designation: string
   company: string
