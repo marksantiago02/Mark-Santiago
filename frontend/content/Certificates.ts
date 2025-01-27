@@ -1,16 +1,16 @@
 const Certificate = [
     {
         id: "1",
-        title: "HackerRank Certified Problem Solving (Basic)",
-        slug: "HackerRank Certified Problem Solving (Basic)",
+        title: "HackerRank Certified Problem Solving (Intermediate)",
+        slug: "HackerRank Certified Problem Solving (Intermediate)",
         organization: "HackerRank",
-        image: '/certificates/ProblemSolvingBasic.PNG',
-        issue_date: "24 Jan 2025",
+        image: '/certificates/ProblemSolvingIntermediate.PNG',
+        issue_date: "26 Jan 2025",
         expiration_date: "Does not expire",
-        credential_id: "350A6A3F72F1",
-        created_at: "24 Jan 2025",
-        updated_at: "24 Jan 2025",
-        link: "https://www.hackerrank.com/certificates/350A6A3F72F1",
+        credential_id: "E7831B1FDB11",
+        created_at: "26 Jan 2025",
+        updated_at: "26 Jan 2025",
+        link: "https://www.hackerrank.com/certificates/E7831B1FDB11",
     },
     {
         id: "2",
@@ -50,6 +50,58 @@ const Certificate = [
         created_at: "25 Jan 2025",
         updated_at: "25 Jan 2025",
         link: "https://www.hackerrank.com/certificates/388034A6E711"
+    },
+    {
+        id: "5",
+        title: "HackerRank Certified Software Engineer",
+        slug: "HackerRank Certified Software Engineer",
+        organization: "HackerRank",
+        image: '/certificates/SoftwareEngineer.PNG',
+        issue_date: "26 Jan 2025",
+        expiration_date: "Does not expire",
+        credential_id: "3B73E30D28A6",
+        created_at: "26 Jan 2025",
+        updated_at: "26 Jan 2025",
+        link: "https://www.hackerrank.com/certificates/3B73E30D28A6"
+    },
+    {
+        id: "6",
+        title: "HackerRank Certified Rest API (Intermediate)",
+        slug: "HackerRank Certified Rest API (Intermediate)",
+        organization: "HackerRank",
+        image: '/certificates/RestAPIIntermediate.PNG',
+        issue_date: "26 Jan 2025",
+        expiration_date: "Does not expire",
+        credential_id: "98FA1416141C",
+        created_at: "26 Jan 2025",
+        updated_at: "26 Jan 2025",
+        link: "https://www.hackerrank.com/certificates/98FA1416141C"
+    },
+    {
+        id: "7",
+        title: "HackerRank Certified SQL (Advanced)",
+        slug: "HackerRank Certified SQL (Advanced)",
+        organization: "HackerRank",
+        image: '/certificates/SQLAdvanced.PNG',
+        issue_date: "27 Jan 2025",
+        expiration_date: "Does not expire",
+        credential_id: "0EAE5B50AC8B",
+        created_at: "27 Jan 2025",
+        updated_at: "27 Jan 2025",
+        link: "https://www.hackerrank.com/certificates/0EAE5B50AC8B"
+    },
+    {
+        id: "8",
+        title: "HackerRank Certified Python (Basic)",
+        slug: "HackerRank Certified Python (Basic)",
+        organization: "HackerRank",
+        image: '/certificates/PythonBasic.PNG',
+        issue_date: "28 Jan 2025",
+        expiration_date: "Does not expire",
+        credential_id: "462373EAD5B1",
+        created_at: "28 Jan 2025",
+        updated_at: "28 Jan 2025",
+        link: "https://www.hackerrank.com/certificates/462373EAD5B1"
     }
 ];
 
