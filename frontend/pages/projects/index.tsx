@@ -8,6 +8,7 @@ import Metadata from '@components/MetaData'
 import pageMeta from '@content/meta'
 import Project from '@content/Project'
 
+
 const ProjectSection = dynamic(() => import('@components/ProjectSection'), {
   loading: () => <Loader />,
 })
