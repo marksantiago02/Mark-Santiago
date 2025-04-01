@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import ReactModal from 'react-modal'
-import PDFViewer from '@components/PDFViewer'
 import Image from 'next/image'
 
 // Set the app element to avoid accessibility warnings
@@ -23,19 +22,8 @@ const MediaModal: React.FC<MediaModalProps> = ({ title, file, description }) => 
     setModalIsOpen(false)
   }
 
-  function getFileExtensionFromBase64(base64String: string): string {
-    const mimeType = base64String.match(/data:(.*?);/)?.[1]
-    const [, fileExtension] = mimeType?.split('/') ?? []
-
-    return fileExtension || ''
-  }
-
   const renderFile = (file: string) => {
     if (file !== null) {
-      const fileExtension = getFileExtensionFromBase64(file)
-      if (fileExtension === 'pdf') {
-        return <PDFViewer base64String={file} />
-      }
       return <Image src={file} alt={title} className="mb-4" width={1000} height={1000} quality={50} style={{ width: "auto", height: "auto" }} />
     }
     return (
@@ -79,25 +67,19 @@ const MediaModal: React.FC<MediaModalProps> = ({ title, file, description }) => 
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <h2 className="text-2xl font-bold mb-2 text-center">{title}</h2>
+            <h2 className="text-xl font-bold text-center">{title}</h2>
           </div>
 
-          {/* Modal Content */}
-          <div className="flex-1 overflow-y-auto">
-            {/* File media */}
+          {/* Content Section */}
+          <div className="p-4">
             {renderFile(file)}
-
-            <p className="mt-4">{description}</p>
+            {description && <p className="mt-4">{description}</p>}
           </div>
-
-          {/* Modal Footer */}
-          <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded" onClick={closeModal}>
-            Close
-          </button>
         </div>
       </ReactModal>
     </>
   )
 }
+
 
 export default MediaModal
