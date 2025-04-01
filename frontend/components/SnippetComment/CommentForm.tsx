@@ -16,6 +16,8 @@ export default function CommentForm({ slug, contentURL }: { slug: string; conten
 
   const FailToastId = 'failed'
 
+  const RipplesAny = Ripples as any;
+
   async function addComment(e: React.SyntheticEvent) {
     e.preventDefault()
 
@@ -145,7 +147,7 @@ export default function CommentForm({ slug, contentURL }: { slug: string; conten
           variants={mobileNavItemSideways}
           className="w-full overflow-hidden rounded-lg shadow-lg sm:max-w-sm"
         >
-          <Ripples className="flex justify-center w-full" color="rgba(225, 225,225,0.2)">
+          <RipplesAny className="flex justify-center w-full" color="rgba(225, 225,225,0.2)">
             <button
               ref={sendButtonRef}
               type="submit"
@@ -153,7 +155,7 @@ export default function CommentForm({ slug, contentURL }: { slug: string; conten
             >
               Add Comment
             </button>
-          </Ripples>
+          </RipplesAny>
         </motion.div>
       </motion.form>
       <ToastContainer closeButton={true} theme={isDarkMode ? 'dark' : 'light'} style={{ zIndex: 1000 }} />

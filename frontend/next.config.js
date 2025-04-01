@@ -118,7 +118,7 @@ module.exports = withPWA({
   generateBuildId: async () => {
     return 'marksantiago0929-build'
   },
-  swcMinify: true,
+  // swcMinify: true,
   reactStrictMode: true,
   images: {
     dangerouslyAllowSVG: true,
