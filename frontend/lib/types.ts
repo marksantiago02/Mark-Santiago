@@ -1,6 +1,6 @@
 import { Variants } from "framer-motion"
 import { MDXRemoteSerializeResult } from "next-mdx-remote"
-import React from "react"
+import React, {ReactElement} from "react"
 import { IconType } from "react-icons/lib"
 import { ReadTimeResults } from "reading-time"
 import { StaticImageData } from "next/image";
@@ -202,7 +202,7 @@ export type UtilityType = {
   data: {
     name: string
     description: string
-    Icon: IconType | JSX.Element
+    Icon: IconType | ReactElement
     link: string
   }[]
 }
