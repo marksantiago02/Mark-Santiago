@@ -14,6 +14,7 @@ export default function QRCodeContainer({
 }) {
   const { currentURL } = useWindowLocation();
   const { isDarkMode } = useDarkMode();
+  const RipplesAny = Ripples as any;
 
   function downloadQRCode() {
     const svg = document.getElementById("QRCode");
@@ -71,7 +72,7 @@ export default function QRCodeContainer({
                 fgColor={isDarkMode ? "white" : "#25282a"}
               />
 
-              <Ripples
+              <RipplesAny
                 className="mt-2"
                 color={
                   isDarkMode ? "rgba(0,0,0, 0.2)" : "rgba(225, 225, 225, 0.2)"
@@ -83,7 +84,7 @@ export default function QRCodeContainer({
                 >
                   Download
                 </button>
-              </Ripples>
+              </RipplesAny>
             </div>
           </motion.div>
         )}

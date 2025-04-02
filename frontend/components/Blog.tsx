@@ -1,10 +1,10 @@
+import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
+import { AiOutlineComment, AiFillLike } from 'react-icons/ai'
 import { getFormattedDate } from '@utils/date'
 import { DevToArticleType } from '@lib/types'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { BlogCardAnimation } from '@content/FramerMotionVariants'
-import { AiOutlineComment, AiFillLike } from 'react-icons/ai'
 
 export default function Blog({ blog, animate = false }: { blog: DevToArticleType; animate?: boolean }) {
   const readingTime = blog.reading_time_minutes

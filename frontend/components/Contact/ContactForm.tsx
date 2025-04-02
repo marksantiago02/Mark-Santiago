@@ -17,6 +17,7 @@ export default function Form() {
   const formRef = useRef<HTMLFormElement>(null!);
 
   const FailToastId = "failed";
+  const RipplesAny = Ripples as any;
 
   function sendEmail(e: React.SyntheticEvent) {
     e.preventDefault();
@@ -197,7 +198,7 @@ export default function Form() {
           variants={mobileNavItemSideways}
           className="w-full overflow-hidden rounded-lg shadow-lg sm:max-w-sm"
         >
-          <Ripples
+          <RipplesAny
             className="flex justify-center w-full"
             color="rgba(225, 225,225,0.2)"
           >
@@ -208,7 +209,7 @@ export default function Form() {
             >
               Send
             </button>
-          </Ripples>
+          </RipplesAny>
         </motion.div>
       </motion.form>
       <ToastContainer
