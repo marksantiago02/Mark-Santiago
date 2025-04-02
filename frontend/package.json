@@ -24,6 +24,7 @@
     "framer-motion": "^12.6.2",
     "globby": "^13.2.2",
     "gray-matter": "^4.0.3",
+    "image-size": "^2.0.2",
     "keen-slider": "^6.8.6",
     "next": "^15.2.4",
     "next-mdx-remote": "^4.4.1",
