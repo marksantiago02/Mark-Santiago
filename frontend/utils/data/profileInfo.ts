@@ -11,7 +11,7 @@ export const profileInfo: ProfileType = {
   contact: "+63 9613316316",
   telegram_username:"santiago_0929",
   linkedin: "https://www.linkedin.com/in/mark-santiago-373172339/",
-  twitter: "https://x.com/sarksantiago02",
+  twitter: "https://x.com/marksantiago02",
   instagram: "https://www.instagram.com/marksantiago_0929/",
   facebook: "https://www.facebook.com/profile.php?id=61569628505488&mibextid=ZbWKwL",
   github: "BTC415",
