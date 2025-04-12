@@ -27,6 +27,7 @@ export type ProfileType = {
   image: StaticImageData
   about: string
   contact: string
+  telegram_username:string
   twitter: string
   instagram:string
   facebook: string

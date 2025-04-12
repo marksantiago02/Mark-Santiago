@@ -1,6 +1,6 @@
 import { SocialPlatform } from "@lib/types"
 import { AiOutlineInstagram } from "react-icons/ai"
-import { BsFacebook, BsGithub, BsLinkedin, BsYoutube, BsTwitter } from "react-icons/bs"
+import { BsFacebook, BsLinkedin, BsYoutube, BsTwitter, BsTelegram, BsWhatsapp } from "react-icons/bs"
 import { HiMail } from "react-icons/hi"
 
 const socialMedia: SocialPlatform[] = [
@@ -10,9 +10,9 @@ const socialMedia: SocialPlatform[] = [
     url: "https://www.linkedin.com/in/mark-santiago-373172339/",
   },
   {
-    title: "Github",
-    Icon: BsGithub,
-    url: "https://github.com/BTC415",
+    title: "Telegram",
+    Icon: BsTelegram,
+    url: "https://t.me/santiago_0929",
   },
   {
     title: "Instagram",
@@ -30,8 +30,8 @@ const socialMedia: SocialPlatform[] = [
     url: "https://www.x.com/MarkSantiago0929",
   },
   {
-    title: "YouTube",
-    Icon: BsYoutube,
+    title: "Whatsapp",
+    Icon: BsWhatsapp,
     url: "https://www.youtube.com/channel/UCNNlfUfTU61QaJDWPEakkeg",
   },
   {
