@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { BsGithub, BsLinkedin, BsTwitter, BsFacebook, BsInstagram } from 'react-icons/bs'
+import { BsGithub, BsLinkedin, BsTwitter, BsFacebook, BsInstagram, BsTelegram } from 'react-icons/bs'
 // import { FiDownload } from 'react-icons/fi'
 import Metadata from '@components/MetaData'
 import AnimatedHeading from '@components/FramerMotion/AnimatedHeading'
@@ -141,7 +141,7 @@ export default function Home() {
                 </div>
                 {/* Contact */}
                 <div className="mt-2">
-                  <span>Contact: </span>
+                  <span>Whatsapp: </span>
                   <span className="text-sky-800 dark:text-sky-400">
                     <a href={`tel:${profileInfo?.contact || '+1 5752238602'}`}>
                       {profileInfo?.contact || '+1 240 685 1440'}
@@ -167,6 +167,13 @@ export default function Home() {
                 <div className="w-6 h-6 mt-2 mr-2">
                   <Link href={`https://github.com/${profileInfo?.github}`} title="GitHub Profile" target="_blank" rel="noopener noreferrer">
                     <BsGithub className="w-full h-full transition-all hover:scale-110 active:scale-90" />
+                  </Link>
+                </div>
+
+                {/* Telegram */}
+                <div className="w-6 h-6 mt-2 mr-2">
+                  <Link href={`https://t.me/${profileInfo?.telegram_username}`} title="GitHub Profile" target="_blank" rel="noopener noreferrer">
+                    <BsTelegram className="w-full h-full transition-all hover:scale-110 active:scale-90" />
                   </Link>
                 </div>
 
