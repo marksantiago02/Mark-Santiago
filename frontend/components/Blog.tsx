@@ -5,6 +5,7 @@ import { AiOutlineComment, AiFillLike } from 'react-icons/ai'
 import { getFormattedDate } from '@utils/date'
 import { DevToArticleType } from '@lib/types'
 import { BlogCardAnimation } from '@content/FramerMotionVariants'
+import defaultBlogImage from "../public/images/blog.png"
 
 export default function Blog({ blog, animate = false }: { blog: DevToArticleType; animate?: boolean }) {
   const readingTime = blog.reading_time_minutes
@@ -23,12 +24,12 @@ export default function Blog({ blog, animate = false }: { blog: DevToArticleType
             <Image
               title={blog.title}
               alt={blog.title}
-              src={blog.cover_image}
-              width={1200}
-              height={600}
+              src={blog.cover_image? blog.cover_image : defaultBlogImage}
+              width={600}
+              height={400}
               quality={50}
               priority={false}
-              className="my-auto transition-all duration-300 backdrop-blur-xl rounded-xl w-full"
+              className="my-auto transition-all duration-300 backdrop-blur-xl rounded-xl"
             />
           </div>
 
