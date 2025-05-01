@@ -56,7 +56,7 @@ export default function Footer({
               return <FooterLink key={index} route={route} text={text} />
             })}
             {/* Submit Issue in Github */}
-            <Link href="https://github.com/BTC415/Portfolio-29-6/issues" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/marksantiago02/Portfolio-29-6/issues" target="_blank" rel="noopener noreferrer">
               <motion.p className="hover:text-black dark:hover:text-white w-fit" variants={popUp}>
                 Report an issue
               </motion.p>

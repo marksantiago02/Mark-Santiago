@@ -14,7 +14,7 @@ export const profileInfo: ProfileType = {
   twitter: "https://x.com/marksantiago02",
   instagram: "https://www.instagram.com/marksantiago_0929/",
   facebook: "https://www.facebook.com/profile.php?id=61569628505488&mibextid=ZbWKwL",
-  github: "BTC415",
+  github: "marksantiago02",
   address: "Angeles City, Central Luzon",
   // resume_link: "https://docs.google.com/document/d/1l57bPBavQkU9wgTKRfe_7wS9UYWj8aS0n-yXMHqIikk/edit?tab=t.0",
 }

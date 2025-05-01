@@ -3,22 +3,22 @@ import { GithubRepo } from "./types"
 const GitHubAccessToken = process.env.GITH_ACCESS_TOKEN
 
 const tempData = {
-  "login": "BTC415",
+  "login": "marksantiago02",
   "id": 133281370,
   "node_id": "U_kgDOB_G2Wg",
   "avatar_url": "https://avatars.githubusercontent.com/u/133281370?v=4",
   "gravatar_id": "",
-  "url": "https://api.github.com/users/BTC415",
-  "html_url": "https://github.com/BTC415",
-  "followers_url": "https://api.github.com/users/BTC415/followers",
-  "following_url": "https://api.github.com/users/BTC415/following{/other_user}",
-  "gists_url": "https://api.github.com/users/BTC415/gists{/gist_id}",
-  "starred_url": "https://api.github.com/users/BTC415/starred{/owner}{/repo}",
-  "subscriptions_url": "https://api.github.com/users/BTC415/subscriptions",
-  "organizations_url": "https://api.github.com/users/BTC415/orgs",
-  "repos_url": "https://api.github.com/users/BTC415/repos",
-  "events_url": "https://api.github.com/users/BTC415/events{/privacy}",
-  "received_events_url": "https://api.github.com/users/BTC415/received_events",
+  "url": "https://api.github.com/users/marksantiago02",
+  "html_url": "https://github.com/marksantiago02",
+  "followers_url": "https://api.github.com/users/marksantiago02/followers",
+  "following_url": "https://api.github.com/users/marksantiago02/following{/other_user}",
+  "gists_url": "https://api.github.com/users/marksantiago02/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/marksantiago02/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/marksantiago02/subscriptions",
+  "organizations_url": "https://api.github.com/users/marksantiago02/orgs",
+  "repos_url": "https://api.github.com/users/marksantiago02/repos",
+  "events_url": "https://api.github.com/users/marksantiago02/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/marksantiago02/received_events",
   "type": "User",
   "user_view_type": "public",
   "site_admin": false,
@@ -44,7 +44,7 @@ export async function fetchGithub() {
   if (fake) return tempData
 
   return fetch(
-    "https://api.github.com/users/BTC415",
+    "https://api.github.com/users/marksantiago02",
     {
       headers: {
         Authorization: `Bearer ${GitHubAccessToken}`,
@@ -62,7 +62,7 @@ export function getOldStats() {
 export async function getGithubStarsAndForks() {
   // Fetch user's repositories from the GitHub API
   const res = await fetch(
-    "https://api.github.com/users/BTC415/repos?per_page=100",
+    "https://api.github.com/users/marksantiago02/repos?per_page=100",
     // {
     //   headers: {
     //     Authorization: `Bearer ${GitHubAccessToken}`,

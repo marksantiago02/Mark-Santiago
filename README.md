@@ -41,6 +41,6 @@ The **Contact** page offers a means to get in touch with me. Whether you're inte
 
 ## Get in Touch
 - Website: [mark-santiago.vercel.app](https://mark-santiago.vercel.app/)
-- GitHub: [github.com/BTC415](https://github.com/BTC415/)
+- GitHub: [github.com/marksantiago02](https://github.com/marksantiago02/)
 - Email: [marksantiago0929@gmail.com](mailto:marksantiago0929@gmail.com)
 - Linkedin: [Mark Santiago](https://www.linkedin.com/in/mark-santiago-373172339/).

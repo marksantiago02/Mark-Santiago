@@ -74,20 +74,20 @@ export default function Stats() {
         </AnimatedDiv>
 
         <div className="flex justify-center w-full my-2">
-          <Link href="https://github.com/BTC415?tab=repositories">
+          <Link href="https://github.com/marksantiago02?tab=repositories">
             <img
-              src="https://github-readme-stats-one-bice.vercel.app/api?username=BTC415&theme=gotham&show_icons=true&count_private=true&hide_border=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR"
+              src="https://github-readme-stats-one-bice.vercel.app/api?username=marksantiago02&theme=gotham&show_icons=true&count_private=true&hide_border=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR"
               className="w-full p-2"
-              alt="@BTC415's github-readme-stats"
+              alt="@marksantiago02's github-readme-stats"
               width={495}
               height={195}
             />
           </Link>
-          <Link href="https://github.com/BTC415?tab=stars">
+          <Link href="https://github.com/marksantiago02?tab=stars">
             <Image
-              src="https://github-readme-streak-stats.herokuapp.com?user=BTC415&theme=gotham&hide_border=true&date_format=M%20j%5B%2C%20Y%5D"
+              src="https://github-readme-streak-stats.herokuapp.com?user=marksantiago02&theme=gotham&hide_border=true&date_format=M%20j%5B%2C%20Y%5D"
               className="w-full p-2"
-              alt="@BTC415's github-readme-streak-stats"
+              alt="@marksantiago02's github-readme-streak-stats"
               width={495}
               height={195}
             />
