@@ -1,12 +1,12 @@
-# mark-santiago.vercel.app
+# MARK SANTIAGO
 
 Welcome to my Portfolio Application! This is a comprehensive portfolio application showcasing my professional experiences, projects, skills, blogs, media, interests, and more.
 
 ## Website URL
-[https://mark-santiago.vercel.app/](https://mark-santiago.vercel.app/)
+[https://marksantiago.top](https://marksantiago.top)
 
 ## Table of Contents
-- [mark-santiago.vercel.app](#mark-santiagovercel)
+- [https://marksantiago.top](https://marksantiago.top)
   - [Website URL](#website-url)
   - [Table of Contents](#table-of-contents)
   - [About](#about)
@@ -43,4 +43,5 @@ The **Contact** page offers a means to get in touch with me. Whether you're inte
 - Website: [mark-santiago.vercel.app](https://mark-santiago.vercel.app/)
 - GitHub: [github.com/marksantiago02](https://github.com/marksantiago02/)
 - Email: [marksantiago0929@gmail.com](mailto:marksantiago0929@gmail.com)
+- Telegram: [marksantiago02](https://t.me/marksantiago02)
 - Linkedin: [Mark Santiago](https://www.linkedin.com/in/mark-santiago-373172339/).
