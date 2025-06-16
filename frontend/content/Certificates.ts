@@ -37,9 +37,22 @@ const Certificate = [
         created_at: "24 Jan 2025",
         updated_at: "24 Jan 2025",
         link: "https://www.hackerrank.com/certificates/EF9415D1759E"
-    },
+    },    
     {
         id: "4",
+        title: "Blockchain Fundamentals",
+        slug: "Blockchain Fundamentals",
+        organization: "Chainlink",
+        image: '/certificates/blockchain-fundamentals-certification.png',
+        issue_date: "05 May 2025",
+        expiration_date: "06 May 2026",
+        credential_id: "d67fd917-1f71-4df2-86fe-5a61935a75ac",
+        created_at: "05 May 2025",
+        updated_at: "05 May 2025",
+        link: "https://www.credly.com/badges/d67fd917-1f71-4df2-86fe-5a61935a75ac/public_url"
+    },
+    {
+        id: "5",
         title: "HackerRank Certified Node.js (Intermediate)",
         slug: "HackerRank Certified Node.js (Intermediate)",
         organization: "HackerRank",
@@ -50,19 +63,6 @@ const Certificate = [
         created_at: "25 Jan 2025",
         updated_at: "25 Jan 2025",
         link: "https://www.hackerrank.com/certificates/388034A6E711"
-    },
-    {
-        id: "5",
-        title: "HackerRank Certified Software Engineer",
-        slug: "HackerRank Certified Software Engineer",
-        organization: "HackerRank",
-        image: '/certificates/SoftwareEngineer.PNG',
-        issue_date: "26 Jan 2025",
-        expiration_date: "Does not expire",
-        credential_id: "3B73E30D28A6",
-        created_at: "26 Jan 2025",
-        updated_at: "26 Jan 2025",
-        link: "https://www.hackerrank.com/certificates/3B73E30D28A6"
     },
     {
         id: "6",
@@ -102,6 +102,19 @@ const Certificate = [
         created_at: "28 Jan 2025",
         updated_at: "28 Jan 2025",
         link: "https://www.hackerrank.com/certificates/462373EAD5B1"
+    },
+    {
+        id: "9",
+        title: "HackerRank Certified Software Engineer",
+        slug: "HackerRank Certified Software Engineer",
+        organization: "HackerRank",
+        image: '/certificates/SoftwareEngineer.PNG',
+        issue_date: "26 Jan 2025",
+        expiration_date: "Does not expire",
+        credential_id: "3B73E30D28A6",
+        created_at: "26 Jan 2025",
+        updated_at: "26 Jan 2025",
+        link: "https://www.hackerrank.com/certificates/3B73E30D28A6"
     }
 ];
 

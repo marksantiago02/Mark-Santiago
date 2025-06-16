@@ -12,7 +12,7 @@ const socialMedia: SocialPlatform[] = [
   {
     title: "Telegram",
     Icon: BsTelegram,
-    url: "https://t.me/santiago_0929",
+    url: "https://t.me/marksantiago02",
   },
   {
     title: "Instagram",

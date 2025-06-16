@@ -1,6 +1,29 @@
 const Experience = [
-    {
+        {
         id: 1,
+        slug: "Lead Blockchain developer",
+        company: "Lead Blockchain developer",
+        company_image: "/images/companies/hciss.png",
+        company_url: "https://hciss.io",
+        address: "Remote",
+        designation: "Lead Blockchain developer",
+        job_type: "Full Time",
+        job_location_type: "Remote",
+        start_date: "Jan 2025",
+        end_date: "Present",
+        duration: "Jan 2025 - Present",
+        duration_in_days: "6 months",
+        currently_working: "string",
+        description: `
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Developed and audited an QSE Token contract and presale contract on Ethereum Mainnet for ICO</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Created Token presale alert telegram bot for ICO</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Led the front-end development of ICO page using React.js, converting React applications to Next.js to enhance performance with server-side rendering (SSR), static site generation (SSG), and improved SEO.</span></p>
+        `,
+        created_at: "string",
+        updated_at: "string",
+    },
+    {
+        id: 2,
         slug: "Freelancing",
         company: "Freelancing",
         company_image: "/images/companies/upwork.png",
@@ -10,8 +33,8 @@ const Experience = [
         job_type: "Full Time",
         job_location_type: "Remote",
         start_date: "Jul 2024",
-        end_date: "Present",
-        duration: "Jul 2024 - Present",
+        end_date: "Jan 2025",
+        duration: "Jul 2024 - Jan 2025",
         duration_in_days: "6 months",
         currently_working: "string",
         description: `
@@ -24,7 +47,7 @@ const Experience = [
         updated_at: "string",
     },
     {
-        id: 2,
+        id: 3,
         slug: "Luxfy",
         company: "Luxfy",
         company_image: "/images/companies/luxfy.png",
@@ -47,7 +70,7 @@ const Experience = [
         updated_at: "string",
     },
     {
-        id: 3,
+        id: 4,
         slug: "RUBY Exchange",
         company: "RUBY Exchange",
         company_image: "/images/companies/rubyexchange.svg",
@@ -98,7 +121,7 @@ const Experience = [
     //     updated_at: "string",
     // },
     {
-        id: 4,
+        id: 5,
         slug: "AutoTroph",
         company: "AutoTroph",
         company_image: "/images/companies/autotroph.png",
