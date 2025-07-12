@@ -46,7 +46,7 @@ export default function BlogDetails() {
   if (!mounted) return null;
     
   function stripHtml(html: string) {
-    const strippedText = html.replace(/<[^>]*>/g, '') // Removes all HTML tags
+    const strippedText = html.replace(/<[^>]*>/g, '')
     return strippedText
   }
 
