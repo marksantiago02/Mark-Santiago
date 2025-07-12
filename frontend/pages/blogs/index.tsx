@@ -51,7 +51,6 @@ export default function Blogs() {
     fetchBlogs();
   }, []);
 
-  // Filter blogs based on search
   useEffect(() => {
     const filteredPosts = blogsData.filter(post =>
       post.title.toLowerCase().includes(searchValue.trim().toLowerCase())
@@ -59,7 +58,6 @@ export default function Blogs() {
     setFilteredBlogs(filteredPosts);
   }, [searchValue, blogsData]);
 
-  // Keyboard shortcut handler
   useEffect(() => {
     const handleAutoSearch = (e: KeyboardEvent) => {
       if (e.code === 'Slash' && e.ctrlKey) {
