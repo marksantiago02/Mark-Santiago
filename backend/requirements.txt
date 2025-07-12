@@ -5,7 +5,7 @@ autopep8==2.3.2
 beautifulsoup4==4.12.2
 cffi==1.15.1
 cryptography==44.0.2
-Django==5.1.7
+Django>=5.1.10
 django-admin-interface==0.29.4
 django-cleanup==9.0.0
 django-colorfield==0.12.0
