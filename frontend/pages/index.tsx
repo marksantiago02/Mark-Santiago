@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { BsGithub, BsLinkedin, BsTwitter, BsFacebook, BsInstagram, BsTelegram } from 'react-icons/bs'
-// import { FiDownload } from 'react-icons/fi'
+import { FiDownload } from 'react-icons/fi'
 import Metadata from '@components/MetaData'
 import AnimatedHeading from '@components/FramerMotion/AnimatedHeading'
 import getRSS from '@lib/generateRSS'
@@ -108,7 +108,7 @@ export default function Home() {
                 >
                   <span>{latest_experience?.designation || staticData.personal.current_designation}</span>
                   <span className="text-xs md:text-sm lg:text-xl mx-2 italic">at</span>
-                  <span>{"Digital World"}</span>
+                  <span>{"HCISS"}</span>
                 </motion.p>
               </div>
 
@@ -217,7 +217,7 @@ export default function Home() {
             </div>
 
             {/* Resume Download Button */}
-            {/* <Link
+            <Link
               href={profileInfo.resume_link}
               target="_blank"
               rel="noopener noreferrer"
@@ -225,7 +225,7 @@ export default function Home() {
             >
               <FiDownload />
               <p>Resume</p>
-            </Link> */}
+            </Link>
           </div>
         </motion.section>
 

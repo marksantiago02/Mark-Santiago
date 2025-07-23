@@ -63,7 +63,7 @@
 //     // Others
 //     generator: 'Next.js',
 //     applicationName: 'marksantiago0929',
-//     authors: [{ name: 'Mark Santiago', url: 'https://www.linkedin.com/in/numanibnmazid/' }],
+//     authors: [{ name: 'Mark Santiago', url: 'https://www.linkedin.com/in/mark-santiago-147926367/' }],
 //     referrer: 'origin-when-cross-origin',
 //     viewport: {
 //       width: 'device-width',
