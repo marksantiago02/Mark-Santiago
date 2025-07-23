@@ -40,7 +40,7 @@ The **Stats** page presents statistics relevant to my professional profile, such
 The **Contact** page offers a means to get in touch with me. Whether you're interested in collaborating on a project, have a question, or just want to say hello, feel free to reach out!
 
 ## Get in Touch
-- Website: [mark-santiago.vercel.app](https://mark-santiago.vercel.app/)
+- Website: [marksantiago.top](https://marksantiago.top/)
 - GitHub: [github.com/marksantiago02](https://github.com/marksantiago02/)
 - Email: [marksantiago0929@gmail.com](mailto:marksantiago0929@gmail.com)
 - Telegram: [marksantiago02](https://t.me/marksantiago02)
