@@ -143,8 +143,8 @@ export default function Home() {
                 <div className="mt-2">
                   <span>Whatsapp: </span>
                   <span className="text-sky-800 dark:text-sky-400">
-                    <a href={`tel:${profileInfo?.contact || '+1 5752238602'}`}>
-                      {profileInfo?.contact || '+1 240 685 1440'}
+                    <a href={`tel:${profileInfo?.contact || '+63 9613316316'}`}>
+                      {profileInfo?.contact || '+63 9613316316'}
                     </a>
                   </span>
                 </div>
