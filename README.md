@@ -44,4 +44,4 @@ The **Contact** page offers a means to get in touch with me. Whether you're inte
 - GitHub: [github.com/marksantiago02](https://github.com/marksantiago02/)
 - Email: [marksantiago0929@gmail.com](mailto:marksantiago0929@gmail.com)
 - Telegram: [marksantiago02](https://t.me/marksantiago02)
-- Linkedin: [Mark Santiago](https://www.linkedin.com/in/mark-santiago-373172339/).
+- Linkedin: [Mark Santiago](https://www.linkedin.com/in/mark-santiago-147926367/).

@@ -7,7 +7,7 @@ const socialMedia: SocialPlatform[] = [
   {
     title: "LinkedIn",
     Icon: BsLinkedin,
-    url: "https://www.linkedin.com/in/mark-santiago-373172339/",
+    url: "https://www.linkedin.com/in/mark-santiago-147926367/",
   },
   {
     title: "Telegram",

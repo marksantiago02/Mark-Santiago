@@ -34,7 +34,7 @@ export type ProfileType = {
   linkedin: string
   github: string
   address: string
-  // resume_link: string
+  resume_link: string
 }
 
 /* Custom Animated Components types */
