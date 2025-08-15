@@ -4,11 +4,11 @@ import { BsFacebook, BsLinkedin, BsYoutube, BsTwitter, BsTelegram } from "react-
 import { HiMail } from "react-icons/hi"
 
 const socialMedia: SocialPlatform[] = [
-  {
-    title: "LinkedIn",
-    Icon: BsLinkedin,
-    url: "https://www.linkedin.com/in/mark-santiago-147926367/",
-  },
+  // {
+  //   title: "LinkedIn",
+  //   Icon: BsLinkedin,
+  //   url: "https://www.linkedin.com/in/mark-santiago-147926367/",
+  // },
   {
     title: "Telegram",
     Icon: BsTelegram,

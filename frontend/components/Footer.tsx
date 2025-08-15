@@ -112,7 +112,7 @@ export default function Footer({
               target="_blank"
               aria-label="Next.js"
               rel="noreferrer"
-              href="https://www.linkedin.com/in/mark-santiago-147926367/"
+              href="https://t.me/marksantiago02"
               className="font-semibold hover:underline"
             >
               Mark Santiago
