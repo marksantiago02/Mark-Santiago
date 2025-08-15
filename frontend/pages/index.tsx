@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { BsGithub, BsLinkedin, BsTwitter, BsFacebook, BsInstagram, BsTelegram } from 'react-icons/bs'
+import { BsGithub, BsTwitter, BsFacebook, BsInstagram, BsTelegram } from 'react-icons/bs'
 import { FiDownload } from 'react-icons/fi'
 import Metadata from '@components/MetaData'
 import AnimatedHeading from '@components/FramerMotion/AnimatedHeading'
@@ -152,7 +152,7 @@ export default function Home() {
 
               <motion.div variants={opacityVariant} className="flex items-center justify-center gap-2 mt-4">
                 {/* LinkedIn */}
-                <div className="w-6 h-6 mt-2 mr-2">
+                {/* <div className="w-6 h-6 mt-2 mr-2">
                   <Link
                     href={profileInfo?.linkedin}
                     title="LinkedIn Profile"
@@ -161,7 +161,7 @@ export default function Home() {
                   >
                     <BsLinkedin className="w-full h-full transition-all hover:scale-110 active:scale-90" />
                   </Link>
-                </div>
+                </div> */}
 
                 {/* Github */}
                 <div className="w-6 h-6 mt-2 mr-2">

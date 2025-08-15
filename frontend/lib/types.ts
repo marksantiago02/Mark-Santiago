@@ -31,7 +31,7 @@ export type ProfileType = {
   twitter: string
   instagram:string
   facebook: string
-  linkedin: string
+  // linkedin: string
   github: string
   address: string
   resume_link: string

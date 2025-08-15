@@ -1,14 +1,14 @@
 import { SocialPlatform } from "@lib/types"
 import { AiOutlineInstagram } from "react-icons/ai"
-import { BsFacebook, BsLinkedin, BsYoutube, BsTwitter, BsTelegram } from "react-icons/bs"
+import { BsFacebook, BsYoutube, BsTwitter, BsTelegram } from "react-icons/bs"
 import { HiMail } from "react-icons/hi"
 
 const socialMedia: SocialPlatform[] = [
-  {
-    title: "LinkedIn",
-    Icon: BsLinkedin,
-    url: "https://www.linkedin.com/in/mark-santiago-147926367/",
-  },
+  // {
+  //   title: "LinkedIn",
+  //   Icon: BsLinkedin,
+  //   url: "https://www.linkedin.com/in/mark-santiago-147926367/",
+  // },
   {
     title: "Telegram",
     Icon: BsTelegram,
