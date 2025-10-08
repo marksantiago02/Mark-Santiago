@@ -17,6 +17,10 @@ type Stats = {
 
 export default function Stats() {
   const [mounted, setMounted] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const [streakImageError, setStreakImageError] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
+  const [streakImageLoading, setStreakImageLoading] = useState(true);
   const { data: github } = useSWR("/api/stats/github", fetcher)
 
   const stats: Stats[] = [
@@ -40,7 +44,27 @@ export default function Stats() {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    
+    // Set timeout for images to prevent indefinite loading
+    const imageTimeout = setTimeout(() => {
+      if (imageLoading) {
+        setImageError(true);
+        setImageLoading(false);
+      }
+    }, 10000); // 10 second timeout
+
+    const streakTimeout = setTimeout(() => {
+      if (streakImageLoading) {
+        setStreakImageError(true);
+        setStreakImageLoading(false);
+      }
+    }, 10000); // 10 second timeout
+
+    return () => {
+      clearTimeout(imageTimeout);
+      clearTimeout(streakTimeout);
+    };
+  }, [imageLoading, streakImageLoading]);
 
   if (!mounted) {
     return (
@@ -73,25 +97,81 @@ export default function Stats() {
           </div>
         </AnimatedDiv>
 
-        <div className="flex justify-center w-full my-2">
-          <Link href="https://github.com/marksantiago02?tab=repositories">
-            <img
-              src="https://github-readme-stats-one-bice.vercel.app/api?username=marksantiago02&theme=gotham&show_icons=true&count_private=true&hide_border=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR"
-              className="w-full p-2"
-              alt="@marksantiago02's github-readme-stats"
-              width={495}
-              height={195}
-            />
-          </Link>
-          <Link href="https://github.com/marksantiago02?tab=stars">
-            <Image
-              src="https://github-readme-streak-stats.herokuapp.com?user=marksantiago02&theme=gotham&hide_border=true&date_format=M%20j%5B%2C%20Y%5D"
-              className="w-full p-2"
-              alt="@marksantiago02's github-readme-streak-stats"
-              width={495}
-              height={195}
-            />
-          </Link>
+        <div className="flex flex-col lg:flex-row justify-center w-full my-2 gap-4">
+          <div className="flex-1">
+            <Link href="https://github.com/marksantiago02?tab=repositories">
+              {!imageError ? (
+                <>
+                  {imageLoading && (
+                    <div className="w-full p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center animate-pulse">
+                      <p className="text-gray-600 dark:text-gray-400">Loading GitHub stats...</p>
+                    </div>
+                  )}
+                  <img
+                    src="https://github-readme-stats-one-bice.vercel.app/api?username=marksantiago02&theme=gotham&show_icons=true&count_private=true&hide_border=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR"
+                    className="w-full p-2"
+                    alt="@marksantiago02's github-readme-stats"
+                    width={495}
+                    height={195}
+                    onLoad={() => setImageLoading(false)}
+                    onError={() => {
+                      setImageError(true);
+                      setImageLoading(false);
+                    }}
+                    style={{ display: imageLoading ? 'none' : 'block' }}
+                  />
+                </>
+              ) : (
+                <div className="w-full p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    GitHub stats image failed to load. 
+                    <Link href="https://github.com/marksantiago02?tab=repositories" className="text-blue-500 hover:underline ml-1">
+                      View repositories directly
+                    </Link>
+                  </p>
+                </div>
+              )}
+            </Link>
+          </div>
+          
+          <div className="flex-1">
+            <Link href="https://github.com/marksantiago02?tab=stars">
+              {!streakImageError ? (
+                <>
+                  {streakImageLoading && (
+                    <div className="w-full p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center animate-pulse">
+                      <p className="text-gray-600 dark:text-gray-400">Loading streak stats...</p>
+                    </div>
+                  )}
+                  <Image
+                    src="https://github-readme-streak-stats.herokuapp.com?user=marksantiago02&theme=gotham&hide_border=true&date_format=M%20j%5B%2C%20Y%5D"
+                    className="w-full p-2"
+                    alt="@marksantiago02's github-readme-streak-stats"
+                    width={495}
+                    height={195}
+                    onLoad={() => setStreakImageLoading(false)}
+                    onError={() => {
+                      setStreakImageError(true);
+                      setStreakImageLoading(false);
+                    }}
+                    priority={false}
+                    style={{ display: streakImageLoading ? 'none' : 'block' }}
+                  />
+                </>
+              ) : (
+                <div className="w-full p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center">
+                  <p className="text-gray-600 dark:text-gray-400 mb-2">
+                    GitHub streak stats failed to load
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-500">
+                    <Link href="https://github.com/marksantiago02?tab=stars" className="text-blue-500 hover:underline">
+                      View starred repositories
+                    </Link>
+                  </p>
+                </div>
+              )}
+            </Link>
+          </div>
         </div>
       </section>
     </>
