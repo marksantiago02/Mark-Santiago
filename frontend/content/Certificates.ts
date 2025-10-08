@@ -55,7 +55,7 @@ const Certificate = [
         id: "5",
         title: "Artificial Intelligence Fundamentals",
         slug: "Artificial Intelligence Fundamentals",
-        organization: "Chainlink",
+        organization: "IBM SkillsBuild",
         image: '/certificates/AI-fundamentals-certification.png',
         issue_date: "06 Oct 2025",
         expiration_date: "07 Oct 2026",
