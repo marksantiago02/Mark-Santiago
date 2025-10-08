@@ -1,6 +1,6 @@
 import { SocialPlatform } from "@lib/types"
 import { AiOutlineInstagram } from "react-icons/ai"
-import { BsFacebook, BsYoutube, BsTwitter, BsTelegram } from "react-icons/bs"
+import { BsFacebook, BsTwitter, BsTelegram, BsLinkedin } from "react-icons/bs"
 import { HiMail } from "react-icons/hi"
 
 const socialMedia: SocialPlatform[] = [
@@ -24,21 +24,26 @@ const socialMedia: SocialPlatform[] = [
     Icon: BsFacebook,
     url: "https://www.facebook.com/profile.php?id=61569628505488&mibextid=ZbWKwL",
   },
-    {
+  {
     title: "Twitter",
     Icon: BsTwitter,
-    url: "https://www.x.com/MarkSantiago0929",
+    url: "https://www.x.com/marksantiago02",
   },
+  // {
+  //   title: "YouTube",
+  //   Icon: BsYoutube,
+  //   url: "https://www.youtube.com/channel/UCNNlfUfTU61QaJDWPEakkeg",
+  // },
   {
-    title: "YouTube",
-    Icon: BsYoutube,
-    url: "https://www.youtube.com/channel/UCNNlfUfTU61QaJDWPEakkeg",
+    title: "Linkedin",
+    Icon: BsLinkedin,
+    url: "https://www.linkedin.com/in/l-santiago-a39060386/"
   },
   {
     title: "Mail",
     Icon: HiMail,
     url: "mailto:marksantiago0929@gmail.com",
-  },
+  }
 ]
 
 export default socialMedia

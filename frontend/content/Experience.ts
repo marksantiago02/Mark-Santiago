@@ -1,80 +1,106 @@
 const Experience = [
-        {
+    {
         id: 1,
-        slug: "Lead Blockchain developer",
-        company: "Lead Blockchain developer",
+        slug: "Co Founder & Blockchain Lead",
+        company: "Co Founder & Blockchain Lead",
         company_image: "/images/companies/hciss.png",
         company_url: "https://hciss.io",
         address: "Remote",
-        designation: "Lead Blockchain developer",
+        designation: "Co Founder & Blockchain Lead",
         job_type: "Full Time",
         job_location_type: "Remote",
-        start_date: "Jan 2025",
+        start_date: "Feb 2025",
         end_date: "Present",
-        duration: "Jan 2025 - Present",
-        duration_in_days: "6 months",
+        duration: "Feb 2025 - Present",
+        duration_in_days: "8 months",
         currently_working: "string",
         description: `
         <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Constructed a gas-optimized smart contract with Solidity and Hardhat for QSE token presale, enabling seamless transactions that attracted over 500 new investors, ultimately fostering a more engaged community around the project.</span></p>
         <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Engineered integration for QSE token presale smart contract with frontend using ethers.js and rainbowkit, delivering a smooth experience for over 10,000 users.</span></p>
         <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Enhanced transparency for community members by developing a Telegram and Discord bot to display token presale progress notifications.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Achieved a security audit score of 67 without KYC after collaborating with solidproof.io to audit the smart contract.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Achieved a security audit score of 80 after collaborating with solidproof.io to audit the smart contract.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Collaborated in an Agile environment with regular team meetings facilitated through Slack for communication, Jira for project management, and Google Meet for virtual meetings.</span></p>
         `,
         created_at: "string",
         updated_at: "string",
     },
     {
         id: 2,
-        slug: "Freelancing",
-        company: "Freelancing",
-        company_image: "/images/companies/upwork.png",
-        company_url: "https://upwork.com",
+        slug: "Co Founder",
+        company: "CycleSyncAILabs",
+        company_image: "/images/companies/cyclesyncailabs.png",
+        company_url: "https://cyclesyncai.com/",
         address: "Remote",
-        designation: "Software Developer",
+        designation: "Co Founder",
         job_type: "Full Time",
         job_location_type: "Remote",
-        start_date: "Jul 2024",
-        end_date: "Jan 2025",
-        duration: "Jul 2024 - Jan 2025",
-        duration_in_days: "6 months",
+        start_date: "Feb 2024",
+        end_date: "Present",
+        duration: "Feb 2024 - Present",
+        duration_in_days: "18 months",
         currently_working: "string",
         description: `
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Improved application performance metrics by 30% by architecting and scaling 5 enterprise-grade React/Redux apps with custom hooks.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Spearheaded UI/UX modernization initiatives based on data-driven user feedback, resulting in 40% surge in user retention.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Reduced data retrieval latency by 30% by engineering a DePIN analytics platform with GraphQL, Apollo, Dune Query, and Redis.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Lowered NFT transaction times by 25% by designing and launching a multi-chain marketplace on Ethereum and Solana with Next.js, Node.js, and Solidity.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Developed a Solana trading bot with TypeScript and specialized SDKs that increased trading efficiency by 15% by automating strategies and integrating real-time data through Telegram.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Worked on bidirectional trustless bridge system between Arbitrum and ARK V3 forked HMESH blockchain with Solidity, ARK SDK and ensured high security with Merkle proof.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Built a Conversational AI chatbot integration platform leveraging GPT-4, combining AI simplicity with personalized innovation.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Developed and deployed AI voice agents tailored for industries such as email marketing and healthcare, enhancing customer engagement, automating workflows, and improving operational efficiency.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Enhanced an image captioning model, boosting accuracy by 92% through transfer learning and targeted fine-tuning.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Designed and maintained AI-powered cloud applications, enabling seamless system integration and reducing infrastructure costs by 20%.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Updated and supervised AI-powered mobile applications, resulting in a 20% increase in downloads and a 15% improvement in user ratings.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Developed and supported AI-driven APIs, improving cross-application data exchange and increasing interoperability by 25%.</span></p>
         `,
         created_at: "string",
         updated_at: "string",
     },
     {
         id: 3,
-        slug: "Luxfy",
-        company: "Luxfy",
-        company_image: "/images/companies/luxfy.png",
-        company_url: "https://lux.link",
-        address: "Hong Kong",
-        designation: "Senior Software Engineer",
+        slug: "MiradaAI",
+        company: "MiradaAI",
+        company_image: "/images/companies/miradaai.png",
+        company_url: "https://mirada.ai/",
+        address: "Remote",
+        designation: "Project Manager",
         job_type: "Full Time",
         job_location_type: "Remote",
-        start_date: "Jun 2023",
-        end_date: "Jun 2024",
-        duration: "Jun 2023 - Jun 2024",
-        duration_in_days: "13 months",
+        start_date: "Nov 2022",
+        end_date: "Oct 2023",
+        duration: "Nov 2022 - Oct 2023",
+        duration_in_days: "12 months",
         currently_working: "string",
         description: `
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Directed the development of the Vulcan ICO Launchpad frontend and smart contract utilizing Solidity, Hardhat, TypeScript, and Ethers.js, facilitating a successful launch that raised $50K in the first week.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Architected and constructed the Turbo Trade cross-chain AMM/DEX platform leveraging Cosmos SDK and Bifrost protocol, enabling seamless multi-blockchain asset swaps and increasing platform liquidity by 25%.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Deployed over five smart contracts in Solidity to manage secure trading logic for 1,000+ users on a multi-million dollar platform, utilizing The Graph's Subgraph to index blockchain data and enhancing frontend data retrieval speed by 30%.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Implemented third-party API integrations (CoinMarketCap, CoinGecko) within a Next.js UI, delivering accurate real-time data analytics and interactive dashboards that boosted user trust and engagement metrics by 30%.</span></p>
-        `,
+            <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Led the development of a multi-modal AI platform supporting text, image, STT, TTS, video, and audio generation, fully integrated within the Binance Smart Chain ecosystem.</span></p>
+            <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Designed and deployed scalable web applications with Next.js v14, implementing API routes and advanced server-side logic with a focus on performance, scalability, and security.</span></p>
+            <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Developed a cross-platform Linux desktop application with Electron, React, and TypeScript, prioritizing user experience, scalability, and maintainability.</span></p>
+            <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Engineered robust data models and access layers using Prisma and PostgreSQL, ensuring type-safe database interactions, migrations, and long-term maintainability.</span></p>
+            <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Integrated blockchain functionality with AI services, enabling seamless interaction between smart contracts and AI-driven applications.</span></p>
+            `,
         created_at: "string",
         updated_at: "string",
     },
     {
         id: 4,
+        slug: "Lux Partner",
+        company: "Lux Partner",
+        company_image: "/images/companies/luxfy.png",
+        company_url: "https://lux.link",
+        address: "Hong Kong",
+        designation: "Senior Blockchain Developer",
+        job_type: "Full Time",
+        job_location_type: "Remote",
+        start_date: "Nov 2021",
+        end_date: "Sep 2022",
+        duration: "Nov 2021 - Sep 2022",
+        duration_in_days: "13 months",
+        currently_working: "string",
+        description: `
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Directed the development of Vulcan ICO Launchpad, delivering both frontend and smart contracts with Solidity, Hardhat, TypeScript, and Ethers.js, driving a successful launch that raised $50K in the first week.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Architected and built the Turbo Trade cross-chain AMM/DEX using Cosmos SDK and the Bifrost protocol, enabling seamless multi-blockchain asset swaps and boosting platform liquidity by 25%.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Deployed and managed 5+ Solidity smart contracts to secure trading logic for 1,000+ users on a multi-million dollar platform, leveraging The Graph’s Subgraph to index blockchain data and improving frontend data retrieval speed by 30%.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Integrated third-party APIs (CoinMarketCap, CoinGecko) into a Next.js UI, delivering real-time data analytics and interactive dashboards.</span></p>
+        `,
+        created_at: "string",
+        updated_at: "string",
+    },
+    {
+        id: 5,
         slug: "Trust Swap",
         company: "Trust Swap",
         company_image: "/images/companies/trustswap.jpeg",
@@ -83,17 +109,15 @@ const Experience = [
         designation: "Software Developer",
         job_type: "Full Time",
         job_location_type: "Remote",
-        start_date: "Jun 2022",
-        end_date: "Apr 2023",
-        duration: "Jun 2022 - Apr 2023",
-        duration_in_days: "11 months",
+        start_date: "Jul 2020",
+        end_date: "Oct 2021",
+        duration: "Jul 2020 - Oct 2021",
+        duration_in_days: "16 months",
         currently_working: "string",
         description: `
         <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Engineered the TrustSwap DeFi protocol's smart contracts for secure liquidity pool management, token swaps, and staking, achieving a 20% increase in transaction processing speed compared to previous iterations.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Developed a user-centric interface for the DEX platform using Next.js, TypeScript, and Redux, integrating seamlessly with smart contracts via Ethers.js and Subgraph, resulting in a 35% increase in user satisfaction ratings.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Transformed legacy Angular codebase to modern React architecture, improving productivity by 30%.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Developed a Smart Exchange platform using TypeScript, Next.js, and MUI, integrating Uniswap V3 with Smart Router, Fiat On/Off Ramp solutions, and APIs from CoinMarketCap, CoinGecko, and 0x for real-time market data and trading functionality.</span></p>
         <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Instituted enterprise-grade architecture following SOLID principles, reducing technical debt by 25%.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Structured RESTful API integration layer, driving 20% increase in feature adoption.</span></p>
         `,
         created_at: "string",
         updated_at: "string",
@@ -126,7 +150,7 @@ const Experience = [
     //     updated_at: "string",
     // },
     {
-        id: 5,
+        id: 6,
         slug: "AutoTroph",
         company: "AutoTroph",
         company_image: "/images/companies/autotroph.png",
@@ -135,16 +159,16 @@ const Experience = [
         designation: "Frontend Developer",
         job_type: "Full Time",
         job_location_type: "Remote",
-        start_date: "Jul 2021",
-        end_date: "Feb 2022",
-        duration: "Jul 2021 - May 2022",
-        duration_in_days: "11 months",
+        start_date: "Jul 2018",
+        end_date: "May 2020",
+        duration: "Jul 2018 - May 2020",
+        duration_in_days: "23 months",
         currently_working: "string",
         description: `
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Built high-performance gaming interfaces using React.js and Pixi.js, achieving 95% cross-platform compatibility.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Crafted enterprise component library that expedited development cycles by 30%.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Revolutionized rendering optimizations and caching strategies, reducing latency by 50%.</span></p>
-        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Devised an innovative testing strategy in conjunction with QA teams to facilitate thorough validation of UI components, leading to a 100% pass rate in cross-browser compatibility assessments.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Developed high-performance gaming interfaces with React.js and Pixi.js, achieving 95% cross-platform compatibility.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Built an enterprise-grade component library, accelerating development cycles by 30%.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Optimized rendering and caching strategies, reducing latency by 50% and enhancing overall system responsiveness.</span></p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><!-- [if !supportLists]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;"><span style="mso-list: Ignore;">●<span style="font: 7.0pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span lang="EN" style="font-family: Lora; mso-fareast-font-family: Lora; mso-bidi-font-family: Lora;">Designed and implemented an innovative UI testing strategy in collaboration with QA teams, ensuring a 100% pass rate in cross-browser compatibility assessments.</span></p>
         `,
         created_at: "string",
         updated_at: "string",

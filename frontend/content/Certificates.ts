@@ -37,7 +37,7 @@ const Certificate = [
         created_at: "24 Jan 2025",
         updated_at: "24 Jan 2025",
         link: "https://www.hackerrank.com/certificates/EF9415D1759E"
-    },    
+    },
     {
         id: "4",
         title: "Blockchain Fundamentals",
@@ -53,6 +53,19 @@ const Certificate = [
     },
     {
         id: "5",
+        title: "Artificial Intelligence Fundamentals",
+        slug: "Artificial Intelligence Fundamentals",
+        organization: "Chainlink",
+        image: '/certificates/AI-fundamentals-certification.png',
+        issue_date: "06 Oct 2025",
+        expiration_date: "07 Oct 2026",
+        credential_id: "b7015e46-46b3-4b6a-bde5-d8c1ba1c7bb7",
+        created_at: "06 Oct 2025",
+        updated_at: "06 Oct 2025",
+        link: "https://www.credly.com/badges/b7015e46-46b3-4b6a-bde5-d8c1ba1c7bb7/public_url"
+    },
+    {
+        id: "6",
         title: "HackerRank Certified Node.js (Intermediate)",
         slug: "HackerRank Certified Node.js (Intermediate)",
         organization: "HackerRank",
@@ -65,7 +78,7 @@ const Certificate = [
         link: "https://www.hackerrank.com/certificates/388034A6E711"
     },
     {
-        id: "6",
+        id: "7",
         title: "HackerRank Certified Rest API (Intermediate)",
         slug: "HackerRank Certified Rest API (Intermediate)",
         organization: "HackerRank",
@@ -78,7 +91,7 @@ const Certificate = [
         link: "https://www.hackerrank.com/certificates/98FA1416141C"
     },
     {
-        id: "7",
+        id: "8",
         title: "HackerRank Certified SQL (Advanced)",
         slug: "HackerRank Certified SQL (Advanced)",
         organization: "HackerRank",
@@ -91,7 +104,7 @@ const Certificate = [
         link: "https://www.hackerrank.com/certificates/0EAE5B50AC8B"
     },
     {
-        id: "8",
+        id: "9",
         title: "HackerRank Certified Python (Basic)",
         slug: "HackerRank Certified Python (Basic)",
         organization: "HackerRank",
@@ -104,7 +117,7 @@ const Certificate = [
         link: "https://www.hackerrank.com/certificates/462373EAD5B1"
     },
     {
-        id: "9",
+        id: "10",
         title: "HackerRank Certified Software Engineer",
         slug: "HackerRank Certified Software Engineer",
         organization: "HackerRank",
